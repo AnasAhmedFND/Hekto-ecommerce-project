@@ -103,7 +103,7 @@ const ProductShop = () => {
               
                <div className="border md:w-[250px] w-[150px] md:h-[363px] h-[280px] text-center shadow-xl group relative overflow-hidden ">
                  <img className='border bg-[#f5f5f8] group-hover:bg-[#bad9c899] ' src={item.thumbnail} alt="" />
-                <div className="absolute top-32 -left-10 group-hover:left-5  group-hover:duration-700 group-hover:text-blue-500 ">
+                <div className="absolute top-10 md:top-32 -left-10 md:group-hover:left-5 group-hover:left-3  group-hover:duration-700 group-hover:text-blue-500 ">
                   <p><LuShoppingCart /></p>
                   <p className='mt-3'><FiHeart /></p>
                   <p className='mt-3'><FaSearchPlus /></p>
@@ -120,7 +120,7 @@ const ProductShop = () => {
             categoryItem.map((item) => (
                 <div className="border w-[250px] h-[363px] text-center shadow-xl group relative    ">
                   <img className='border bg-[#f5f5f8] group-hover:bg-[#bad9c899] ' src={item.thumbnail} alt="" />
-                  <div className="absolute  top-32 -left-10 group-hover:left-5 group-hover:duration-700 group-hover:text-blue-500 ">
+                  <div className="absolute  top-10 md:top-32 -left-10 md:group-hover:left-5 group-hover:left-3 group-hover:duration-700 group-hover:text-blue-500 ">
                   <p><LuShoppingCart /></p>
                   <p className='mt-3'><FiHeart /></p>
                   <p className='mt-3'><FaSearchPlus /></p>
