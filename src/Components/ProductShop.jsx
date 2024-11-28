@@ -7,16 +7,23 @@ const ProductShop = () => {
     let shopApiProduct = useContext(apiData)
     
    let [category, setCategory] = useState([])
+   let [brand, setBrand] = useState([])
+
 
    useEffect(() => {
         setCategory([...new Set(shopApiProduct.map((item)=> item.category))])
+        setBrand([...new Set(shopApiProduct.map((item)=> item.brand))])
+
    }, [shopApiProduct])
+
   
    let [categoryShow, setCategoryShow] = useState(false)
-   
+   let [brandShow, setBrandShow] = useState(false)
+
 
      let [categoryItem, setCategoryItem] = useState([])
-     
+     let [brandItem, setBrandItem] = useState([])
+
 
     const hendleCategory = (c) => {
         let filteredProduct = shopApiProduct.filter((item) => item.category == c)
@@ -26,31 +33,45 @@ const ProductShop = () => {
         
     }
 
+
     
     
   return (
     <>
       <div className="container mx-auto md:flex justify-between py-10">
+        <div className="md:w-[18%]  w-[60%]">
 
-        
+          <div className="  ">
+              <div className=" ">
+                  <h1 onClick={() => setCategoryShow(!categoryShow)} className='flex items-center font-bold cursor-pointer'>Shop By Category <span className='ml-5'><TiArrowSortedDown /></span></h1>
+                  
+              </div>
+              {categoryShow &&
+                  <ul className='overflow-y-scroll h-36'>
+                  {category.map((item) =>(
+                    <li className='cursor-pointer md:bg-white bg-[#30e0dd]  ' onClick={() => hendleCategory (item)}>{item}</li>
+                  ))}          
+            </ul>
+              }
+          </div>
+          
+          <div className="  ">
+              <div className=" ">
+                  <h1 onClick={() => setBrandShow(!brandShow)} className='flex items-center font-bold cursor-pointer'>Shop By Brand <span className='ml-5'><TiArrowSortedDown /></span></h1>
+                  
+              </div>
+              {brandShow &&
+                  <ul className='overflow-y-scroll h-36'>
+                  {brand.map((item) =>(
+                    <li className='cursor-pointer md:bg-white bg-[#30e0dd]  ' onClick={() => hendleCategory (item)}>{item}</li>
+                  ))}          
+            </ul>
+              }
+          </div>
 
-        <div className="md:w-[18%] w-[60%] ">
-            <div className=" ">
-                 <h1 onClick={() => setCategoryShow(!categoryShow)} className='flex items-center font-bold cursor-pointer'>Shop By Category <span className='ml-5'><TiArrowSortedDown /></span></h1>
-                 
-            </div>
-            {categoryShow &&
-                <ul className='overflow-y-scroll h-36'>
-                {category.map((item) =>(
-                  <li className='cursor-pointer md:bg-white bg-[#30e0dd]  ' onClick={() => hendleCategory (item)}>{item}</li>
-                ))}          
-          </ul>
-            }
         </div>
-
+     
         
-        
-
 
         <div className="md:w-[80%] flex flex-wrap gap-4 overflow-y-scroll h-[500px] mt-5 ">
 
