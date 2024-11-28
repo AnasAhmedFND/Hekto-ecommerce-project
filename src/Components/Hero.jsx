@@ -21,43 +21,49 @@ const Hero = () => {
           <div className="">
             <div className=" md:flex md:px-10 md:pb-20 pb-5   bg-[#f2eff2] md:justify-between ">
               <div className="">
-                  <img src={Lamp} alt="" />
+                  <img className='md:w-[100%] w-[50%] ' src={Lamp} alt="" />
                   
               </div>
 
-              <div className="md:mt-44 relative md:right-16 ">
+             <div className=" flex flex-col-reverse md:flex md:flex-row  ">
+             <div className="md:mt-36 relative md:right-16 ">
                   <p className='text-primary'>Best Furniture For Your Castle....</p>
                   <h1 className='md:text-4xl font-josefin text-xl mt-4'>New Furniture Collection <br />Trends in 2020</h1>
                   <p className='mt-2 '>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est  dipiscing in phasellus non in justo.</p>
                   <button className='border text-white bg-biguni px-5 py-2 text-[13px] mt-2'>Shop Now</button>
               </div>
 
-              <div className="w-[40%] md:mt-20 relative md:right-10 md:py-0 py-5">
+              <div className="md:w-[40%] w-[80%] md:mt-20 relative md:right-10 md:py-0 py-5 md:-left-10 left-[10%] ">
                   <img src={All} alt="" />          
 
               </div>
+             </div>
+
           </div>
           </div>
           
           <div className="">
             <div className=" md:flex md:px-10 md:pb-20 pb-5  bg-[#f2eff2] md:justify-between ">
             <div className="">
-                <img src={Lamp} alt="" />
+                <img className='md:w-[100%] w-[50%] ' src={Lamp} alt="" />
                 
             </div>
 
            
-            <div className="md:mt-44 relative md:right-16 ">
-                <p className='text-primary'>Best Furniture For Your Castle....</p>
-                <h1 className='md:text-4xl font-josefin text-xl mt-4'>New Furniture Collection <br />Trends in 2020</h1>
-                <p className='mt-2 '>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est  dipiscing in phasellus non in justo.</p>
-                <button className='border text-white bg-biguni px-5 py-2 text-[13px] mt-2'>Shop Now</button>
-            </div>
+           <div className=" flex flex-col-reverse md:flex md:flex-row  ">
+             <div className="md:mt-36 relative md:right-16 ">
+                  <p className='text-primary'>Best Furniture For Your Castle....</p>
+                  <h1 className='md:text-4xl font-josefin text-xl mt-4'>New Furniture Collection <br />Trends in 2020</h1>
+                  <p className='mt-2 '>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est  dipiscing in phasellus non in justo.</p>
+                  <button className='border text-white bg-biguni px-5 py-2 text-[13px] mt-2'>Shop Now</button>
+              </div>
 
-            <div className="w-[40%] md:mt-20 relative md:right-10 md:py-0 py-5">
-                <img src={All} alt="" />          
+              <div className="md:w-[40%] w-[80%] md:mt-20 relative md:right-10 md:py-0 py-5 md:-left-10 left-[10%] ">
+                  <img src={All} alt="" />          
 
-            </div>
+              </div>
+             </div>
+
             
 
           </div>
@@ -66,21 +72,25 @@ const Hero = () => {
         <div className="">
             <div className=" md:flex md:px-10 md:pb-20 pb-5  bg-[#f2eff2] md:justify-between ">
             <div className="">
-                <img src={Lamp} alt="" />
+                <img className='md:w-[100%] w-[50%] ' src={Lamp} alt="" />
                 
             </div>
 
-            <div className="md:mt-44 relative md:right-16 ">
-                <p className='text-primary'>Best Furniture For Your Castle....</p>
-                <h1 className='md:text-4xl font-josefin text-xl mt-4'>New Furniture Collection <br />Trends in 2020</h1>
-                <p className='mt-2 '>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est  dipiscing in phasellus non in justo.</p>
-                <button className='border text-white bg-biguni px-5 py-2 text-[13px] mt-2'>Shop Now</button>
-            </div>
+            <div className=" flex flex-col-reverse md:flex md:flex-row  ">
+             <div className="md:mt-36 relative md:right-16 ">
+                  <p className='text-primary'>Best Furniture For Your Castle....</p>
+                  <h1 className='md:text-4xl font-josefin text-xl mt-4'>New Furniture Collection <br />Trends in 2020</h1>
+                  <p className='mt-2 '>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est  dipiscing in phasellus non in justo.</p>
+                  <button className='border text-white bg-biguni px-5 py-2 text-[13px] mt-2'>Shop Now</button>
+              </div>
 
-            <div className="w-[40%] md:mt-20 relative md:right-10 md:py-0 py-5">
-                <img src={All} alt="" />          
+              <div className="md:w-[40%] w-[80%] md:mt-20 relative md:right-10 md:py-0 py-5 md:-left-10 left-[10%] ">
+                  <img src={All} alt="" />          
 
-            </div>
+              </div>
+             </div>
+
+
           </div>
           </div>
         
