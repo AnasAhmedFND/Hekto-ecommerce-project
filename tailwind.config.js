@@ -6,7 +6,7 @@ export default {
   ],
   theme: {
     container:{
-      padding:'10px'
+      padding:'20px 0px'
     },
     extend: {
       backgroundColor:{
