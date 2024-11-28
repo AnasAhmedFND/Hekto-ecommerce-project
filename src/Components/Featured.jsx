@@ -3,7 +3,7 @@ import { apiData } from './ContextApi';
 import Slider from "react-slick";
 import { RiShoppingCartLine } from "react-icons/ri";
 import { FaRegHeart } from "react-icons/fa6";
-import Plus from '../assets/plus.png'
+import { FaSearchPlus } from "react-icons/fa";
 
 
 
@@ -63,7 +63,8 @@ let filter = info.filter((item) => item.id >= 1 && item.id <= 6)
               <div className="flex gap-5 absolute top-2 -left-36  duration-700 group-hover:left-2 ">
                 <p className='border p-2 rounded-full bg-[#e1e1eb] text-blue-400'><RiShoppingCartLine />  </p>
                 <p className='border p-2 rounded-full bg-[#e1e1eb] text-blue-400'> <FaRegHeart /></p>
-                <img className='border p-2 rounded-full bg-[#e1e1eb] text-blue-400 ' src={Plus} alt="" />
+                <p className='border p-2 rounded-full bg-[#e1e1eb] text-blue-400'> <FaSearchPlus /></p>
+                
               </div>
           </div>
   

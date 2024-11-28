@@ -1,7 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { apiData } from './ContextApi'
 import { TiArrowSortedDown } from "react-icons/ti";
-
+import { FaSearchPlus } from "react-icons/fa";
+import { LuShoppingCart } from "react-icons/lu";
+import { FiHeart } from "react-icons/fi";
 
 const ProductShop = () => {
     let shopApiProduct = useContext(apiData)
@@ -99,23 +101,36 @@ const ProductShop = () => {
             {categoryItem.length == 0 ? 
             shopApiProduct.map((item) => (
               
-               <div className="border md:w-[250px] w-[150px] md:h-[363px] h-[280px] text-center shadow-xl group ">
+               <div className="border md:w-[250px] w-[150px] md:h-[363px] h-[280px] text-center shadow-xl group relative overflow-hidden ">
                  <img className='border bg-[#f5f5f8] group-hover:bg-[#bad9c899] ' src={item.thumbnail} alt="" />
-               
-                 <h4 className='font-bold'>{item.title} </h4>
-                 <p className='relative bottom-20'><span className='text-[80px] text-[#f227a1] '>.</span><span className='text-[80px] text-[#f53044] '>.</span><span className='text-[80px] text-[#3330eb] '>.</span></p>
-                 <p className='relative bottom-24'>{item.price} <span className='text-primary ml-2'>{item.discountPercentage}</span> </p>
+                <div className="absolute top-32 -left-10 group-hover:left-5  group-hover:duration-700 group-hover:text-blue-500 ">
+                  <p><LuShoppingCart /></p>
+                  <p className='mt-3'><FiHeart /></p>
+                  <p className='mt-3'><FaSearchPlus /></p>
+                </div>
+
+                <div className="">
+                  <h4 className='font-bold'>{item.title} </h4>
+                  <p className='relative bottom-20'><span className='text-[80px] text-[#f227a1] '>.</span><span className='text-[80px] text-[#f53044] '>.</span><span className='text-[80px] text-[#3330eb] '>.</span></p>
+                  <p className='relative bottom-24'>{item.price} <span className='text-primary ml-2'>{item.discountPercentage}</span> </p>
+                </div>
                </div>
             ))                         
             :
             categoryItem.map((item) => (
-                <div className="border w-[250px] h-[363px] text-center shadow-xl group ">
+                <div className="border w-[250px] h-[363px] text-center shadow-xl group relative    ">
                   <img className='border bg-[#f5f5f8] group-hover:bg-[#bad9c899] ' src={item.thumbnail} alt="" />
-                 
+                  <div className="absolute  top-32 -left-10 group-hover:left-5 group-hover:duration-700 group-hover:text-blue-500 ">
+                  <p><LuShoppingCart /></p>
+                  <p className='mt-3'><FiHeart /></p>
+                  <p className='mt-3'><FaSearchPlus /></p>
+                </div>
+
+                <div className="">
                   <h4 className='font-bold'>{item.title} </h4>
                   <p className='relative bottom-20'><span className='text-[80px] text-[#f227a1] '>.</span><span className='text-[80px] text-[#f53044] '>.</span><span className='text-[80px] text-[#3330eb] '>.</span></p>
                   <p className='relative bottom-24'>{item.price} <span className='text-primary ml-2'>{item.discountPercentage}</span> </p>
-
+                </div>
                   
                 </div>
              ))
