@@ -38,9 +38,11 @@ const ProductShop = () => {
         let filteredProduct = shopApiProduct.filter((item) => item.category == c)
         setCategoryItem(filteredProduct)
 
-        console.log(categoryItem);
+       
         
     }
+
+    
 
 
     

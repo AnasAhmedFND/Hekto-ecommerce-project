@@ -19,8 +19,7 @@ function App() {
       <Route path='/' element={<Home/>} />
       <Route path='/shop' element={<Shop/>} />
       <Route path='/blog' element={<Blog/>} />
-      <Route path='/product' element={<TwoTrending/>} />
-      
+      <Route path='/product' element={<TwoTrending/>} />      
       <Route path='/social' element={<Social/>} />
     </Route>
 
