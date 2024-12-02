@@ -2,8 +2,9 @@ import React from 'react'
 import { MdMailOutline } from "react-icons/md";
 import { MdAddCall } from "react-icons/md";
 import { RxPerson } from "react-icons/rx";
-import { GiSelfLove } from "react-icons/gi";
+import { FaRegHeart } from "react-icons/fa6";
 import { FiShoppingCart } from "react-icons/fi";
+import { Link } from 'react-router-dom';
 
 
 const Header = () => {
@@ -26,7 +27,7 @@ const Header = () => {
               <option value="#">BDT</option>
             </select>
             <p className='flex items-center'>Login <RxPerson /></p>
-            <p className='flex items-center'>Wishlist  <GiSelfLove /></p>
+            <p className='flex items-center'><Link to='/shoplist' className='flex items-center'> Wishlist  <FaRegHeart /> </Link> </p>
             <p><FiShoppingCart /></p>
          </div>
        </div>
