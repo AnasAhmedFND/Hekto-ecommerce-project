@@ -28,7 +28,7 @@ const Header = () => {
             </select>
             <p className='flex items-center'>Login <RxPerson /></p>
             <p className='flex items-center'><Link to='/shoplist' className='flex items-center'> Wishlist  <FaRegHeart /> </Link> </p>
-            <p><FiShoppingCart /></p>
+            <p><Link to='/cart' >  <FiShoppingCart /> </Link> </p>
          </div>
        </div>
     </>
