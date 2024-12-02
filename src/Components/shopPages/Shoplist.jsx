@@ -17,10 +17,10 @@ const Shoplist = () => {
 
     {ListPageFilter.map((item) => (
 
-      <div className=" flex  gap-10 items-center mb-5  shadow-lg p-2">
+      <div className=" md:flex  gap-10 items-center mb-5  shadow-lg p-2">
         <img className=' ' src={item.thumbnail} alt="" />
         <div className="">
-            <h3 className='font-bold text-xl font-josefin'>{item.title} <span className='text-6xl font-bold text-red-800'>.</span> <span className='text-6xl font-bold text-red-800'>.</span> <span className='text-6xl font-bold text-red-800'>.</span> </h3>
+            <h3 className='font-bold text-xl font-josefin'>{item.title} <span className='text-6xl font-bold text-[#e12ec6] '>.</span> <span className='text-6xl font-bold text-red-800'>.</span> <span className='text-6xl font-bold text-[#2b2bf7] '>.</span> </h3>
             <div className="flex gap-5 items-center">
                 <p className='font-bold'>${item.price} </p>
                 <p className='text-red-500 font-bold line-through'>${item.discountPercentage} </p>
