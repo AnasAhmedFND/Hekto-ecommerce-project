@@ -9,6 +9,7 @@ import Blog from './Components/Blog'
 import TwoTrending from './Components/TwoTrending'
 import Shop from './pages/Shop'
 import Social from './Components/Social'
+import Listpage from './pages/Listpage'
 
 
 
@@ -21,6 +22,7 @@ function App() {
       <Route path='/blog' element={<Blog/>} />
       <Route path='/product' element={<TwoTrending/>} />      
       <Route path='/social' element={<Social/>} />
+      <Route path='/shoplist' element={<Listpage/>} />
     </Route>
 
   ))
