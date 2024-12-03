@@ -10,33 +10,33 @@ const Shopcart = () => {
 
     return (
         <>
-            <div className="container mx-auto py-10 flex justify-between ">
-                <div className="w-[60%] ">
-                    <div className="flex font-bold text-xl font-josefin ">
+            <div className="container mx-auto py-10 md:px-0 px-2 md:flex md:justify-between ">
+                <div className="md:w-[60%] ">
+                    <div className="flex font-bold md:text-xl font-josefin ">
                         <h3>Product</h3>
-                        <h3 className='ml-[41%] '>Price</h3>
-                        <h3 className='ml-[8%] '>Quantity</h3>
-                        <h3 className='ml-[10%] '>Total</h3>
+                        <h3 className='md:ml-[41%] ml-[20%] '>Price</h3>
+                        <h3 className='md:ml-[8%] ml-8 '>Quantity</h3>
+                        <h3 className='md:ml-[10%] ml-8 '>Total</h3>
                     </div>
 
                     {cartFilter.map((item) => (
 
 
-                        <div className="flex items-center mb-5 justify-between mt-5">
-                            <div className="flex items-center gap-5 text-[14px]  w-[45%] ">
+                        <div className="flex md:items-center mb-5 justify-between mt-5">
+                            <div className="md:flex items-center gap-5 text-[14px]  w-[45%] ">
                                 <img className='w-[100px] border bg-[#f5f5f9] ' src={item.thumbnail} alt="" />
-                                <div className="">
+                                <div className="mt-2 md:mt-0">
                                     <h3 className='font-bold'>{item.title} </h3>
                                     <p>color:Brown</p>
                                     <p>Size:XL</p>
                                 </div>
                             </div>
 
-                            <p className=' w-[28%] text-center'>{item.price} </p>
+                            <p className=' w-[28%] md:text-center'>{item.price} </p>
 
-                            <div className="flex items-center gap-2 border bg-[#f5f5f8] ">
+                            <div className="flex md:items-center gap-2 border bg-[#f5f5f8] h-[20px] md:h-full relative right-5 md:right-0 ">
                                 <p><FaMinus /></p>
-                                <p>1</p>
+                                <input className='w-[20px] pl-1 ' type="text" placeholder='1' />
                                 <p><FaPlus /></p>
                             </div>
 
@@ -51,7 +51,7 @@ const Shopcart = () => {
                     </div>
                 </div>
 
-                <div className=" w-[35%] ">
+                <div className=" md:w-[35%] py-10 ">
                     <h2 className='text-center font-bold text-xl font-josefin'>Cart Totals</h2>
                     <div className="mt-8 border py-8 px-5 bg-[#F6F5FF] rounded-sm ">
                         <div className="flex justify-between items-center font-bold border-b-2 pb-2 ">
