@@ -41,7 +41,7 @@ const ProductShop = () => {
   const hendlePrice = (value) => {
     let filterPriceproduct = shopApiProduct.filter((item) => item.price > value.low && item.price <= value.high)
     setPriceItem(filterPriceproduct)
-    setCategoryItem([])
+    setBrandItem([])
 
   }
 
@@ -67,7 +67,7 @@ const ProductShop = () => {
 
           <div className="mt-2 border py-2 pl-2 rounded-sm shadow-xl  ">
             <div className=" ">
-              <h1 onClick={() => setBrandShow(!brandShow)} className='flex items-center font-bold cursor-pointer'>Shop By Brand <span className='ml-5'><TiArrowSortedDown /></span></h1>
+              <h1 onClick={() => setBrandShow(!brandShow)} className='flex items-center font-bold cursor-pointer'>Shop By Brand <span className='ml-[45px] '><TiArrowSortedDown /></span></h1>
 
             </div>
             {brandShow &&
@@ -81,7 +81,7 @@ const ProductShop = () => {
 
           <div className="mt-2 border py-2 pl-2 rounded-sm shadow-xl ">
             <div className=" ">
-              <h1 onClick={() => setPriceShow(!priceShow)} className='flex items-center font-bold cursor-pointer'>Shop By Price <span className='ml-5'><TiArrowSortedDown /></span></h1>
+              <h1 onClick={() => setPriceShow(!priceShow)} className='flex items-center font-bold cursor-pointer'>Shop By Price <span className='ml-[53px] '><TiArrowSortedDown /></span></h1>
 
             </div>
             {priceShow &&
