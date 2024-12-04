@@ -30,6 +30,12 @@ const ProductShop = () => {
     let filteredProduct = shopApiProduct.filter((item) => item.category == cate)
     setCategoryItem(filteredProduct)
     setPriceItem([])
+  } 
+
+  const hendelBrand = (quality) => {
+    let filterBrnad = shopApiProduct.filter((item) => item.brand == quality)
+    setBrandItem(filterBrnad)       
+    setCategoryItem([])
   }
 
   const hendlePrice = (value) => {
@@ -38,10 +44,6 @@ const ProductShop = () => {
     setCategoryItem([])
 
   }
-
-
-
-
 
 
   return (
@@ -71,7 +73,7 @@ const ProductShop = () => {
             {brandShow &&
               <ul className='overflow-y-scroll h-36'>
                 {brand.map((item) => (
-                  <li className='cursor-pointer md:bg-white bg-[#30e0dd] border mb-2 pl-2 py-1 shadow-md  ' onClick={() => hendleCategory(item)}>{item}</li>
+                  <li className='cursor-pointer md:bg-white bg-[#30e0dd] border mb-2 pl-2 py-1 shadow-md ' onClick={() => hendelBrand(item)}>{item}</li>
                 ))}
               </ul>
             }
@@ -84,11 +86,11 @@ const ProductShop = () => {
             </div>
             {priceShow &&
               <ul className='overflow-y-scroll h-36 flex flex-col gap-2 '>
-                <li className='mt-4 border py-1  shadow-md px-1' onClick={() => hendlePrice({ low: 0.00, high: 10.00 })}>$0.00 - $10.00</li>
-                <li className='border py-1  shadow-md px-1' onClick={() => hendlePrice({ low: 10.01, high: 20.00 })}>$10.01 - $20.00</li>
-                <li className='border py-1  shadow-md px-1' onClick={() => hendlePrice({ low: 20.01, high: 100.00 })}>$20.01 - $100.00</li>
-                <li className='border py-1  shadow-md px-1' onClick={() => hendlePrice({ low: 100.01, high: 1000.00 })}>$100.01 - $1000.00</li>
-                <li className='border py-1  shadow-md px-1' onClick={() => hendlePrice({ low: 1000.01, high: 10000.00 })}>$1000.01 - $10000.00</li>
+                <li className='mt-4 border py-1  shadow-md px-1 cursor-pointer' onClick={() => hendlePrice({ low: 0.00, high: 10.00 })}>$0.00 - $10.00</li>
+                <li className='border py-1  shadow-md px-1 cursor-pointer' onClick={() => hendlePrice({ low: 10.01, high: 20.00 })}>$10.01 - $20.00</li>
+                <li className='border py-1  shadow-md px-1 cursor-pointer' onClick={() => hendlePrice({ low: 20.01, high: 100.00 })}>$20.01 - $100.00</li>
+                <li className='border py-1  shadow-md px-1 cursor-pointer' onClick={() => hendlePrice({ low: 100.01, high: 1000.00 })}>$100.01 - $1000.00</li>
+                <li className='border py-1  shadow-md px-1 cursor-pointer' onClick={() => hendlePrice({ low: 1000.01, high: 10000.00 })}>$1000.01 - $10000.00</li>
 
               </ul>
             }
@@ -138,6 +140,7 @@ const ProductShop = () => {
                 </div>
               ))
               :
+              
               categoryItem.map((item) => (
                 <div className="border w-[250px] h-[363px] text-center shadow-xl group relative    ">
                   <img className='border bg-[#f5f5f8] group-hover:bg-[#bad9c899] ' src={item.thumbnail} alt="" />

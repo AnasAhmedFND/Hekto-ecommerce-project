@@ -4,6 +4,8 @@ import Slider from "react-slick";
 import { RiShoppingCartLine } from "react-icons/ri";
 import { FaRegHeart } from "react-icons/fa6";
 import { FaSearchPlus } from "react-icons/fa";
+import Viewdetails from './button/Viewdetails';
+import { Link } from 'react-router-dom';
 
 
 
@@ -59,7 +61,8 @@ let filter = info.filter((item) => item.id >= 1 && item.id <= 6)
 
           <div className="flex flex-col justify-center border  pb-12 pt-5  relative overflow-hidden bg-[#e9e9ec]  rounded-t-lg ">
               <img className='w-[70%]  md:ml-8 ml-10  mt-5  ' src={item.thumbnail} alt="" />
-              <button  className='absolute -bottom-16  left-1/2 -translate-x-1/2 px-5 py-2 bg-green-400 w-[60%] rounded-xl text-[10px]  text-white duration-700 ease-in-out group-hover:bottom-4  '>View Details</button>
+              
+              <p className='absolute -bottom-16  left-1/2 -translate-x-1/2 px-5 py-2 bg-green-400 w-[60%] rounded-xl text-[10px]  text-white duration-700 ease-in-out group-hover:bottom-4 text-center '>  <Link to='/details' > <Viewdetails /> </Link> </p>
               <div className="flex gap-5 absolute top-2 -left-36  duration-700 group-hover:left-2 ">
                 <p className='border p-2 rounded-full bg-[#e1e1eb] text-blue-400'><RiShoppingCartLine />  </p>
                 <p className='border p-2 rounded-full bg-[#e1e1eb] text-blue-400'> <FaRegHeart /></p>

@@ -11,6 +11,7 @@ import Shop from './pages/Shop'
 import Social from './Components/Social'
 import Listpage from './pages/Listpage'
 import Cart from './pages/Cart'
+import Detailspage from './pages/Detailspage'
 
 
 
@@ -25,6 +26,7 @@ function App() {
       <Route path='/social' element={<Social/>} />
       <Route path='/shoplist' element={<Listpage/>} />
       <Route path='/cart' element={<Cart/>} />
+      <Route path='/details' element={<Detailspage/>} />
     </Route>
 
   ))
