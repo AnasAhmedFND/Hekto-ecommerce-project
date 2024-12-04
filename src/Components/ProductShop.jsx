@@ -49,7 +49,7 @@ const ProductShop = () => {
   return (
     <>
       <div className="container mx-auto md:flex justify-between py-10   ">
-        <div className="md:w-[18%]  w-[60%] mt-5 " >
+        <div className="md:w-[20%]  w-[60%] mt-5 " >
 
           <div className=" border py-2 pl-2 rounded-sm shadow-xl  ">
             <div className=" ">
@@ -65,7 +65,7 @@ const ProductShop = () => {
             }
           </div>
 
-          <div className="mt-2 border py-2 px-2 rounded-sm shadow-xl  ">
+          <div className="mt-2 border py-2 pl-2 rounded-sm shadow-xl  ">
             <div className=" ">
               <h1 onClick={() => setBrandShow(!brandShow)} className='flex items-center font-bold cursor-pointer'>Shop By Brand <span className='ml-5'><TiArrowSortedDown /></span></h1>
 
@@ -79,7 +79,7 @@ const ProductShop = () => {
             }
           </div>
 
-          <div className="mt-2 border py-2 px-2 rounded-sm shadow-xl ">
+          <div className="mt-2 border py-2 pl-2 rounded-sm shadow-xl ">
             <div className=" ">
               <h1 onClick={() => setPriceShow(!priceShow)} className='flex items-center font-bold cursor-pointer'>Shop By Price <span className='ml-5'><TiArrowSortedDown /></span></h1>
 
@@ -100,7 +100,7 @@ const ProductShop = () => {
 
 
 
-        <div className="md:w-[80%] flex flex-wrap gap-4 overflow-y-scroll h-[500px] mt-5 ">
+        <div className="md:w-[78%] flex flex-wrap gap-4 overflow-y-scroll h-[500px] mt-5 ">
 
           {categoryItem.length > 0 ?
             categoryItem.map((item) => (
@@ -120,6 +120,27 @@ const ProductShop = () => {
                 </div>
               </div>
             ))
+
+            :
+            brandItem.length > 0 ?
+            brandItem.map((item) => (
+
+              <div className="border md:w-[250px] w-[150px] md:h-[363px] h-[280px] text-center shadow-xl group relative overflow-hidden ">
+                <img className='border bg-[#f5f5f8] group-hover:bg-[#bad9c899] ' src={item.thumbnail} alt="" />
+                <div className="absolute top-10 md:top-32 -left-10 md:group-hover:left-5 group-hover:left-3  group-hover:duration-700 group-hover:text-blue-500 ">
+                  <p><LuShoppingCart /></p>
+                  <p className='mt-3'><FiHeart /></p>
+                  <p className='mt-3'><FaSearchPlus /></p>
+                </div>
+
+                <div className="">
+                  <h4 className='font-bold'>{item.title} </h4>
+                  <p className='relative bottom-20'><span className='text-[80px] text-[#f227a1] '>.</span><span className='text-[80px] text-[#f53044] '>.</span><span className='text-[80px] text-[#3330eb] '>.</span></p>
+                  <p className='relative bottom-24'>${item.price} <span className='text-primary ml-2'>${item.discountPercentage}</span> </p>
+                </div>
+              </div>
+            ))
+
             :
             priceItem.length > 0 ?
               priceItem.map((item) => (
