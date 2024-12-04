@@ -15,7 +15,7 @@ const Navbar = () => {
 
         setMenuShow(!menuShow);
     }
-    console.log(menuShow);
+   
 
   return (
     <>

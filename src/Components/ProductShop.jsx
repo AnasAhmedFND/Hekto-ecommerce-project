@@ -44,12 +44,41 @@ const ProductShop = () => {
     setBrandItem([])
 
   }
+// pageinetion.............................................................
+  let [currentPage, setCurrentPage] = useState(1);
+  let [perPage, setPerPage] = useState(15);
+
+  let lastItemIndex = currentPage * perPage;
+  let firstItemIndex = lastItemIndex - perPage;
+
+  let perPageProduct = shopApiProduct.slice(firstItemIndex, lastItemIndex)
+    
+
+  let pageNumbers =Math.ceil(shopApiProduct.length / perPage);
+  
+  
+  let numbers = useState([])
+  for(let i = 1; i <= pageNumbers; i++){
+   numbers.push(i)       
+  }
+
+  // prev and next button ........................................
+  const hendelPrevPage = () => {
+    if(currentPage > 1){
+      setCurrentPage(currentPage - 1)
+    }
+  }
+  const hendelNextPage = () => {
+    if(currentPage !== pageNumbers){
+      setCurrentPage(currentPage + 1)
+    }
+  }
 
 
   return (
     <>
       <div className="container mx-auto md:flex justify-between py-10   ">
-        <div className="md:w-[20%]  w-[60%] mt-5 " >
+        <div className="md:w-[20%]  w-[60%] " >
 
           <div className=" border py-2 pl-2 rounded-sm shadow-xl  ">
             <div className=" ">
@@ -95,12 +124,12 @@ const ProductShop = () => {
               </ul>
             }
           </div>
-
+            
         </div>
 
 
 
-        <div className="md:w-[78%] flex flex-wrap gap-4 overflow-y-scroll h-[500px] mt-5 ">
+        <div className="md:w-[78%] flex flex-wrap gap-4   ">
 
           {categoryItem.length > 0 ?
             categoryItem.map((item) => (
@@ -162,7 +191,7 @@ const ProductShop = () => {
               ))
               :
               
-              shopApiProduct.map((item) => (
+              perPageProduct.map((item) => (
                 <div className="border w-[250px] h-[363px] text-center shadow-xl group relative   overflow-hidden ">
                   <img className='border bg-[#f5f5f8] group-hover:bg-[#bad9c899] ' src={item.thumbnail} alt="" />
                   <div className="absolute  top-10 md:top-32 -left-10 md:group-hover:left-5 group-hover:left-3 group-hover:duration-700 group-hover:text-blue-500 ">
@@ -181,14 +210,17 @@ const ProductShop = () => {
               ))
 
           }
-
-
-
-
+           <div className="">
+              <ul className='flex gap-2 mt-5 pb-5 items-center '>
+              <button onClick={hendelPrevPage} className='py-2 px-5 bg-green-500 rounded-sm text-white ml-10'>Prev</button> 
+                {numbers.map((item) =>(
+                  <li className={`border-2 py-1 px-2 cursor-pointer rounded-md ${currentPage === item ? 'bg-[#c3c3d4]': ' ' }`} onClick={() => setCurrentPage(item)}>{item} </li>
+                  
+                ))}
+                 <button onClick={hendelNextPage} className='py-2 px-5 bg-green-500 rounded-sm text-white '>Next</button> 
+              </ul>
+            </div>
         </div>
-
-
-
       </div>
     </>
   )
