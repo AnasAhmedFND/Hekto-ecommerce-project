@@ -49,9 +49,9 @@ const ProductShop = () => {
   return (
     <>
       <div className="container mx-auto md:flex justify-between py-10   ">
-        <div className="md:w-[18%]  w-[60%]  " >
+        <div className="md:w-[18%]  w-[60%] mt-5 " >
 
-          <div className="  ">
+          <div className=" border py-2 pl-2 rounded-sm shadow-xl  ">
             <div className=" ">
               <h1 onClick={() => setCategoryShow(!categoryShow)} className='flex items-center font-bold cursor-pointer'>Shop By Category <span className='ml-5'><TiArrowSortedDown /></span></h1>
 
@@ -65,7 +65,7 @@ const ProductShop = () => {
             }
           </div>
 
-          <div className="mt-2  ">
+          <div className="mt-2 border py-2 px-2 rounded-sm shadow-xl  ">
             <div className=" ">
               <h1 onClick={() => setBrandShow(!brandShow)} className='flex items-center font-bold cursor-pointer'>Shop By Brand <span className='ml-5'><TiArrowSortedDown /></span></h1>
 
@@ -79,7 +79,7 @@ const ProductShop = () => {
             }
           </div>
 
-          <div className="mt-2  ">
+          <div className="mt-2 border py-2 px-2 rounded-sm shadow-xl ">
             <div className=" ">
               <h1 onClick={() => setPriceShow(!priceShow)} className='flex items-center font-bold cursor-pointer'>Shop By Price <span className='ml-5'><TiArrowSortedDown /></span></h1>
 
@@ -141,8 +141,8 @@ const ProductShop = () => {
               ))
               :
               
-              categoryItem.map((item) => (
-                <div className="border w-[250px] h-[363px] text-center shadow-xl group relative    ">
+              shopApiProduct.map((item) => (
+                <div className="border w-[250px] h-[363px] text-center shadow-xl group relative   overflow-hidden ">
                   <img className='border bg-[#f5f5f8] group-hover:bg-[#bad9c899] ' src={item.thumbnail} alt="" />
                   <div className="absolute  top-10 md:top-32 -left-10 md:group-hover:left-5 group-hover:left-3 group-hover:duration-700 group-hover:text-blue-500 ">
                     <p><LuShoppingCart /></p>
