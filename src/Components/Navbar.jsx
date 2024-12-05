@@ -56,7 +56,7 @@ const Navbar = () => {
                   <div className="">
                     <input onChange={handleInput} className='border border-black outline-none ' type="Search" />
                   </div>
-                  <div className="absolute z-20 top-8 left-0 overflow-y-scroll h-[300px] ">
+                  <div className="absolute z-20 top-8 left-0  ">
                     {searchFilterProduct.map((item) => (
                       <div className="">
                         <h5 className='cursor-pointer border rounded-sm bg-white px-1  '>{item.title} </h5>
