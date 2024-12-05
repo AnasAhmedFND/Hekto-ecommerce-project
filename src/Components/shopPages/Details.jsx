@@ -10,7 +10,7 @@ const Details = () => {
 
                 <div className="">
                     <h3>Playwood arm chair</h3>
-                    <div className="">
+                    <div className="flex ">
                         <p><IoIosStar /></p>
                         <p><IoIosStar /></p>
                         <p><IoIosStar /></p>
