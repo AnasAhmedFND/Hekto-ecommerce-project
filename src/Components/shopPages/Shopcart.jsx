@@ -10,7 +10,7 @@ const Shopcart = () => {
 
     return (
         <>
-            <div className="container mx-auto py-10 md:px-0 px-2 md:flex md:justify-between ">
+            <div className="container mx-auto py-10 md:px-0 px-2 md:flex md:justify-between items-center ">
                 <div className="md:w-[60%] ">
                     <div className="flex font-bold md:text-xl font-josefin ">
                         <h3>Product</h3>

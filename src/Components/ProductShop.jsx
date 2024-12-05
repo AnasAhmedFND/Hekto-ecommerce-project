@@ -192,7 +192,7 @@ const ProductShop = () => {
               :
               
               perPageProduct.map((item) => (
-                <div className="border w-[250px] h-[363px] text-center shadow-xl group relative   overflow-hidden ">
+                <div className="border md:w-[250px] w-[150px] md:h-[363px] h-[280px] text-center shadow-xl group relative   overflow-hidden ">
                   <img className='border bg-[#f5f5f8] group-hover:bg-[#bad9c899] ' src={item.thumbnail} alt="" />
                   <div className="absolute  top-10 md:top-32 -left-10 md:group-hover:left-5 group-hover:left-3 group-hover:duration-700 group-hover:text-blue-500 ">
                     <p><LuShoppingCart /></p>
@@ -211,12 +211,14 @@ const ProductShop = () => {
 
           }
            <div>
-              <ul className='flex gap-2 mt-5 pb-5 items-center '>
-              <button onClick={hendelPrevPage} className='py-2 px-5 bg-green-500 rounded-sm text-white ml-10'>Prev</button> 
+              <ul className='flex md:gap-2 mt-5 pb-5 items-center md:overflow-x-hidden  overflow-x-scroll md:w-full w-[350px] '>
+              <button onClick={hendelPrevPage} className='py-2 px-5 bg-green-500 rounded-sm text-white md:ml-10'>Prev</button>        
+
                 {numbers.map((item) =>(
                   <li className={`border-2 py-1 px-2 cursor-pointer rounded-md ${currentPage === item ? 'bg-[#c3c3d4]': ' ' }`} onClick={() => setCurrentPage(item)}>{item} </li>
                   
                 ))}
+             
                  <button onClick={hendelNextPage} className='py-2 px-5 bg-green-500 rounded-sm text-white '>Next</button> 
               </ul>
             </div>
