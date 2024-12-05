@@ -6,7 +6,7 @@ import { MdViewList } from "react-icons/md";
 const Ecommerce = () => {
   return (
     <>
-      <div className="container mx-auto ">
+      <div className="container mx-auto  px-2 md:px-0 ">
        <div className="md:flex md:py-20 py-10 ">
        <div className="">
             <h3 className='font-bold text-primary '>Ecommerce Acceories & Fashion item </h3>

@@ -77,8 +77,8 @@ const ProductShop = () => {
 
   return (
     <>
-      <div className="container mx-auto md:flex justify-between py-10   ">
-        <div className="md:w-[20%]  w-[60%] " >
+      <div className="container mx-auto md:flex justify-between py-10 px-2 md:px-0  ">
+        <div className="md:w-[20%]  w-[60%] pb-5 md:pb-0 " >
 
           <div className=" border py-2 pl-2 rounded-sm shadow-xl  ">
             <div className=" ">
@@ -210,7 +210,7 @@ const ProductShop = () => {
               ))
 
           }
-           <div className="">
+           <div>
               <ul className='flex gap-2 mt-5 pb-5 items-center '>
               <button onClick={hendelPrevPage} className='py-2 px-5 bg-green-500 rounded-sm text-white ml-10'>Prev</button> 
                 {numbers.map((item) =>(
