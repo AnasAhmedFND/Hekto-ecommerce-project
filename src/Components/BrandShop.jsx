@@ -4,7 +4,7 @@ const BrandShop = () => {
     
   return (
     <>
-      <div className="">
+      <div className="container mx-auto">
        <h3>Shop By Brand</h3>
        <ul>
         <li></li>

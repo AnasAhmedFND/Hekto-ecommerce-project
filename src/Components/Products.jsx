@@ -11,7 +11,7 @@ const Products = () => {
 
   return (
     <>
-      <section className='py-10'>
+      <section className='container mx-auto py-10'>
 
        
         <div className="text-center mt-10          ">

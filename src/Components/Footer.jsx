@@ -8,7 +8,7 @@ import { AiFillTwitterCircle } from "react-icons/ai";
 const Footer = () => {
   return (
     <>
-      <div className="px-10 md:flex md:justify-between  border py-20 items-center bg-[#dadae0] ">
+      <div className=" px-10 md:flex md:justify-between  border py-20 items-center bg-[#dadae0] ">
         <div className="">
            <img src={Logo} alt="" />
            <div className="mt-10 flex">
