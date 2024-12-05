@@ -14,7 +14,7 @@ const Shopcart = () => {
                 <div className="md:w-[60%] ">
                     <div className="flex font-bold md:text-xl font-josefin ">
                         <h3>Product</h3>
-                        <h3 className='md:ml-[41%] ml-[20%] '>Price</h3>
+                        <h3 className='md:ml-[41%] ml-[21%] '>Price</h3>
                         <h3 className='md:ml-[8%] ml-8 '>Quantity</h3>
                         <h3 className='md:ml-[10%] ml-8 '>Total</h3>
                     </div>
