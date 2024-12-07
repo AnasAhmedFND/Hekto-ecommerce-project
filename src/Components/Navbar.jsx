@@ -35,6 +35,8 @@ const Navbar = () => {
 
   return (
     <>
+    <div className="px-2 md:px-0">
+
       <div className={`flex md:justify-between md:px-20 md:py-5 py-3 md:items-center gap-5 ${menuShow ? 'pb-40' : 'pb-3'}`}>
         <div className="">
           <img src={Logo} alt="" />
@@ -79,6 +81,7 @@ const Navbar = () => {
 
 
       </div>
+    </div>
     </>
   )
 }

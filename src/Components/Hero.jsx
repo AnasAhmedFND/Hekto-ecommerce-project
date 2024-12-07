@@ -16,7 +16,7 @@ const Hero = () => {
   return (
     
     <>
-    <section className='bg-[#f2eff2] px-2 md:px-0'>      
+    <section className='bg-[#f2eff2] px-2 md:px-0 '>      
 
         <Slider {...settings}>
           
