@@ -2,6 +2,9 @@ import React from 'react'
 import ShopGrid from '../Components/ShopGrid'
 import Details from '../Components/shopPages/Details'
 import Description from '../Components/shopPages/Description'
+import Related from '../Components/shopPages/Related'
+import Social from '../Components/Social'
+
 
 const Detailspage = () => {
   return (
@@ -9,6 +12,8 @@ const Detailspage = () => {
       <ShopGrid pageName='Product Details' />
       <Details/>
       <Description />
+      <Related />
+      <Social />
     </>
   )
 }

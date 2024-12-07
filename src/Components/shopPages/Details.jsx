@@ -18,7 +18,7 @@ const Details = () => {
         <>
             <div className="container mx-auto py-20 ">
                 
-                <div className="flex border gap-10 p-2 shadow-md">
+                <div className="flex border  gap-10 p-2 shadow-lg ">
 
                 <div className="  flex gap-4">
                     <div className=" rounded-sm  w-[100px] flex flex-col gap-2 ">
@@ -47,7 +47,7 @@ const Details = () => {
                     <p className='font-bold mt-2'>$32.00 <span className='text-red-500 pl-5 line-through '>$32.00</span> </p>
                     <p className='font-bold mt-2'>Color</p>
                     <p className='text-[#8f8f97] '>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus <br /> porttitor purus, et volutpat sit.</p>
-                    <h5 className='flex gap-5 font-bold items-center mt-5 font-josefin pl-10'>Add To Cart <FaRegHeart /></h5>
+                    <h5 className='flex gap-5 font-bold items-center mt-5 font-josefin '>Add To Cart <FaRegHeart /></h5>
                     <p className=' font-josefin mt-3 '>Categories:</p>
                     <p className=' font-josefin mt-2'>Tags</p>
                     <div className="flex gap-5 items-center mt-2">
