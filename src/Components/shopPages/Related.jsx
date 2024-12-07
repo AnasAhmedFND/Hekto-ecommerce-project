@@ -7,11 +7,11 @@ const Related = () => {
     let relatedFilter = relatedApiData.filter((item) => item.id >= 41 && item.id <= 44);
   return (
     <>
-      <div className="container mx-auto py-20 ">
-        <h2 className='font-bold text-2xl font-josefin'>Related Products</h2>
-        <div className="flex justify-between pt-5">
+      <div className="container mx-auto py-20 md:px-0 px-2 ">
+        <h2 className='font-bold text-2xl font-josefin md:text-start text-center'>Related Products</h2>
+        <div className="md:flex md:justify-between  md:pt-5 pt-8">
             {relatedFilter.map((item) => (
-                <div className=" w-[240px]   ">
+                <div className=" w-[240px] ml-[50px] md:ml-0 md:pb-0 pb-8">
 
                     <img className='border bg-[#e8e8ef] rounded-lg ' src={item.thumbnail} alt="" />
                     <div className="flex items-center justify-between pt-4 px-2 font-josefin ">

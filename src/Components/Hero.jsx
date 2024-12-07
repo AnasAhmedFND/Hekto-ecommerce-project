@@ -16,8 +16,8 @@ const Hero = () => {
   return (
     
     <>
-    <section>
-      
+    <section className='bg-[#f2eff2] px-2 md:px-0'>      
+
         <Slider {...settings}>
           
           <div className="">
@@ -100,7 +100,7 @@ const Hero = () => {
           
           
         </Slider>
-   
+         
 
     </section>
 
