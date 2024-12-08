@@ -11,7 +11,8 @@ const Shopcart = () => {
     let cartFilter = cartApiData.filter((item) => item.id >= 172 && item.id <= 172);
 
      
-        // let cartData = useSelector((state)=>state.cartItemSlice.cartItem)    
+    //     let cartData = useSelector((state)=>state.cartItemSlice.cartItem)    
+    //    console.log(cartData);
        
         
         
@@ -28,13 +29,10 @@ const Shopcart = () => {
                             <li className='md:ml-[8%] ml-10 '>Quantity</li>
                             <li className='md:ml-[10%] ml-10'>Total</li>
                            
-                        </ul>
-                       
-                    
+                        </ul>                                          
 
 
                     {cartFilter.map((item) => (
-
 
                         <div className="flex md:items-center mb-5 justify-between md:mt-5 mt-10 py-5">
                             <div className="md:flex items-center gap-5 text-[14px]  w-[45%] ">
@@ -57,8 +55,10 @@ const Shopcart = () => {
                             <p className=' w-[20%] text-end '>$219.00</p>
 
                         </div>
-
                     ))}
+
+
+                  
 
                     <div className="flex justify-between ">
                     <button className='py-2 px-3 text-white font-josefin rounded-sm bg-biguni'>Update Curt</button>
