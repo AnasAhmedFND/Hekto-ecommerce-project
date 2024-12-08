@@ -4,14 +4,18 @@ import { FaMinus } from "react-icons/fa";
 import { apiData } from '../ContextApi';
 import { IoIosCheckmark } from "react-icons/io";
 import { useSelector } from 'react-redux'
+
+
 const Shopcart = () => {
     let cartApiData = useContext(apiData);
     let cartFilter = cartApiData.filter((item) => item.id >= 172 && item.id <= 172);
 
-    const cartSelector1 = () => {    
-        let cartData = useSelector((state) =>state.cartItemSlice.cartItem)    
+     
+        // let cartData = useSelector((state)=>state.cartItemSlice.cartItem)    
+       
         
-      }
+        
+   
 
     return (
         <>
@@ -32,7 +36,7 @@ const Shopcart = () => {
                     {cartFilter.map((item) => (
 
 
-                        <div className="flex md:items-center mb-5 justify-between md:mt-5 mt-10">
+                        <div className="flex md:items-center mb-5 justify-between md:mt-5 mt-10 py-5">
                             <div className="md:flex items-center gap-5 text-[14px]  w-[45%] ">
                                 <img className='w-[100px] border bg-[#f5f5f9] ' src={item.thumbnail} alt="" />
                                 <div className="mt-2 md:mt-0">
@@ -56,7 +60,7 @@ const Shopcart = () => {
 
                     ))}
 
-                    <div className="flex justify-between border">
+                    <div className="flex justify-between ">
                     <button className='py-2 px-3 text-white font-josefin rounded-sm bg-biguni'>Update Curt</button>
                     <button className='py-2 px-3 text-white font-josefin rounded-sm bg-biguni'>Cleat Curt</button>
                     </div>
