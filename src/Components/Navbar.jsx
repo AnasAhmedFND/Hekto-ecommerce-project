@@ -61,6 +61,7 @@ const Navbar = () => {
                   <div className="absolute z-20 top-8 left-0  ">
                     {searchFilterProduct.map((item) => (
                       <div className="">
+                        <img src={item.thumbnail} alt="" />
                         <h5 className='cursor-pointer border rounded-sm bg-white px-1  '>{item.title} </h5>
                       </div>
                     ))}

@@ -21,6 +21,9 @@ export default {
         'josefin':["Josefin Sans", "serif"]
 
       },
+      boxShadow: {
+        'shadow ': "10px 10px 10px #ddd"
+      }
     },
   },
   plugins: [],

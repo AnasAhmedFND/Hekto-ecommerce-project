@@ -1,9 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { HiViewGrid } from "react-icons/hi";
 import { MdViewList } from "react-icons/md";
+import ProductShop from './ProductShop';
 
 const Ecommerce = () => {
+
+
+let [resize, setResize] = useState(false);
+
+const hendleResize = () => {
+  setResize(!resize)
+}
+
+
+
+
+
   return (
     <>
       <div className="container mx-auto  px-2 md:px-0 ">
@@ -38,7 +51,7 @@ const Ecommerce = () => {
         <div className="flex items-center md:ml-5 md:mt-0 mt-4">
             <p>View:</p>
             <p className='ml-2'><HiViewGrid /></p>
-            <p className='ml-1'><MdViewList /></p>
+            <p onClick={hendleResize } className='ml-1'><MdViewList /></p>
             <input className='border outline-none ml-5 ' type="Search" />
         </div>
        </div>
