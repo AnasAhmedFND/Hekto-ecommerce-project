@@ -12,6 +12,7 @@ import Social from './Components/Social'
 import Listpage from './pages/Listpage'
 import Cart from './pages/Cart'
 import Detailspage from './pages/Detailspage'
+import Logings from './pages/Logings'
 
 
 
@@ -27,6 +28,8 @@ function App() {
       <Route path='/shoplist' element={<Listpage/>} />
       <Route path='/cart' element={<Cart/>} />
       <Route path='/details' element={<Detailspage/>} />
+      <Route path='/login' element={<Logings/>} />
+
     </Route>
 
   ))

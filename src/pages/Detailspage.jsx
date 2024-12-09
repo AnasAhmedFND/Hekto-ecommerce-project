@@ -9,7 +9,7 @@ import Social from '../Components/Social'
 const Detailspage = () => {
   return (
     <>
-      <ShopGrid pageName='Product Details' />
+      <ShopGrid pageName='Product Details' taitle='Shop Grid Default' />
       <Details/>
       <Description />
       <Related />

@@ -26,7 +26,7 @@ const Header = () => {
               <option value="#">USD</option>
               <option value="#">BDT</option>
             </select>
-            <p className='flex items-center'>Login <RxPerson /></p>
+            <p className='flex items-center'><Link to='/login' className='flex items-center' >  Login <RxPerson /> </Link></p>
             <p className='flex items-center'><Link to='/shoplist' className='flex items-center'> Wishlist  <FaRegHeart /> </Link> </p>
             <p><Link to='/cart' >  <FiShoppingCart /> </Link> </p>
          </div>

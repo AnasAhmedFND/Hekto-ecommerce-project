@@ -8,7 +8,7 @@ const Cart = () => {
 
   return (
     <div>
-      <ShopGrid pageName='Shop Cart' />
+      <ShopGrid pageName='Shop Cart' taitle='Shop Grid Default' />
       <Shopcart/>
     </div>
   )

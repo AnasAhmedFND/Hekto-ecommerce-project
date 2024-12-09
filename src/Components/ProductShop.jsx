@@ -207,7 +207,7 @@ const ProductShop = () => {
                 <div className=" border md:w-[250px] w-[150px] md:h-[363px] h-[280px] text-center shadow-xl group relative   overflow-hidden ">
                   <img className='border bg-[#f5f5f8] group-hover:bg-[#bad9c899] ' src={item.thumbnail} alt="" />
                   <div className="absolute  top-10 md:top-32 -left-10 md:group-hover:left-5 group-hover:left-3 group-hover:duration-700 group-hover:text-blue-500 ">
-                    <p><LuShoppingCart /></p>
+                    <p  onClick={() => hendelAddToCart(item)}><LuShoppingCart /></p>
                     <p className='mt-3'><FiHeart /></p>
                     <p className='mt-3'><FaSearchPlus /></p>
                   </div>
@@ -216,7 +216,7 @@ const ProductShop = () => {
                     <h4 className='font-bold'>{item.title} </h4>
                     <p className='relative bottom-20'><span className='text-[80px] text-[#f227a1] '>.</span><span className='text-[80px] text-[#f53044] '>.</span><span className='text-[80px] text-[#3330eb] '>.</span></p>
                     <p className='relative bottom-24'>${item.price} <span className='text-primary ml-2'>${item.discountPercentage}</span> </p>
-                    <button onClick={() => hendelAddToCart(item)}  className='px-5 bg-green-500  w-full text-white relative bottom-24 '>Add To Cart</button>
+                    
                    
                   </div>
 

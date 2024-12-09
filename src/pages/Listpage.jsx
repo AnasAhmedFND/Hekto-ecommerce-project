@@ -6,7 +6,7 @@ import Social from '../Components/Social'
 const Listpage = () => {
   return (
     <div>
-      <ShopGrid pageName='Shop List' />
+      <ShopGrid pageName='Shop List' taitle='Shop Grid Default'/>
       <Shoplist/>
       <Social/>
     </div>
