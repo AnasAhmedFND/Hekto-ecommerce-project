@@ -4,7 +4,7 @@ import { FaMinus } from "react-icons/fa";
 
 import { IoIosCheckmark } from "react-icons/io";
 import { useDispatch, useSelector } from 'react-redux'
-import { increment, dicrement, deleteProduct } from '../slice/cartSlice';
+import { increment, dicrement, deleteProduct, clearCart } from '../slice/cartSlice';
 import { GiCrossedSabres } from "react-icons/gi";
 
 
@@ -29,6 +29,11 @@ const Shopcart = () => {
     let hendleFromProduct = (index) => {
         dispatch3(deleteProduct(index))
         
+    }
+     
+    // clear all item cartpage................................
+    const hendleClearCart = () => {
+        dispatch(clearCart())
     }
 
 
@@ -74,9 +79,9 @@ const Shopcart = () => {
                     ))}
 
 
-                    <div className="flex justify-between ">
+                    <div className="flex justify-between pt-5">
                         <button className='py-2 px-3 text-white font-josefin rounded-sm bg-biguni'>Update Curt</button>
-                        <button className='py-2 px-3 text-white font-josefin rounded-sm bg-biguni'>Cleat Curt</button>
+                        <button onClick={hendleClearCart} className='py-2 px-3 text-white font-josefin rounded-sm bg-biguni'>Cleat Curt</button>
                     </div>
                 </div>
 
