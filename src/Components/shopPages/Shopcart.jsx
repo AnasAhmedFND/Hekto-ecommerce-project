@@ -1,16 +1,22 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { FaPlus } from "react-icons/fa6";
 import { FaMinus } from "react-icons/fa";
-import { apiData } from '../ContextApi';
+
 import { IoIosCheckmark } from "react-icons/io";
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { increment } from '../slice/cartSlice';
 
 
 const Shopcart = () => {
 
     let cartData = useSelector((state) => state.cartItmeSlice.cartItems)
    
-    
+    // increment plus..................................
+    let dispatch = useDispatch()
+
+    let hendleIncriment = (item) => {
+        dispatch(increment(item))
+    }
 
     return (
         <>
@@ -27,7 +33,7 @@ const Shopcart = () => {
                     </ul>
                          
 
-                    {cartData.map((item) => (
+                    {cartData.map((item,index) => (
 
                         <div className="flex md:items-center mb-5 justify-between md:mt-5 mt-10 py-5">
                             <div className="md:flex items-center gap-5 text-[14px]  w-[45%] ">
@@ -43,11 +49,11 @@ const Shopcart = () => {
 
                             <div className="flex md:items-center gap-2 border bg-[#f5f5f8] h-[20px] md:h-full relative right-5 md:right-0 ">
                                 <p><FaMinus /></p>
-                                <input className='w-[20px] pl-1 ' type="text" placeholder='1' />
-                                <p><FaPlus /></p>
+                               <p className='w-[20px] pl-1 bg-white flex justify-center items-center' >{item.qty} </p>
+                                <p onClick={()=> hendleIncriment(index)}><FaPlus /></p>
                             </div>
 
-                            <p className=' w-[20%] text-end '>$219.00</p>
+                            <p className=' w-[20%] text-end '>{item.qty * item.price} </p>
 
                         </div>
                     ))}

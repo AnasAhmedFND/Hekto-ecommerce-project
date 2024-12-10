@@ -17,11 +17,16 @@ export const cartSlice = createSlice({
       state.cartItems[findProducts].qty += 1;
       localStorage.setItem("cart", JSON.stringify(state.cartItems))
      }                  
+    },
+    increment: (state, action) => {       
+      state.cartItems[action.payload].qty += 1;  
+      localStorage.setItem("cart", JSON.stringify(state.cartItems))       
+      
     }
   }
 })
 
 // Action creators are generated for each case reducer function
-export const { addToCart } = cartSlice.actions
+export const { addToCart, increment } = cartSlice.actions
 
 export default cartSlice.reducer
