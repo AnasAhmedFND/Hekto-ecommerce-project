@@ -9,11 +9,13 @@ import { useSelector } from 'react-redux'
 const Shopcart = () => {
 
     let cartData = useSelector((state) => state.cartItmeSlice.cartItems)
-  
+   
+    
+
     return (
         <>
             <div className="container mx-auto md:py-20 py-10 md:px-0 px-2 md:flex md:justify-between ">
-           
+
                 <div className="md:w-[60%]  ">
 
                     <ul className="flex font-bold md:text-xl font-josefin ">
@@ -23,30 +25,33 @@ const Shopcart = () => {
                         <li className='md:ml-[10%] ml-10'>Total</li>
 
                     </ul>
+                         
 
                     {cartData.map((item) => (
-                    <div className="flex md:items-center mb-5 justify-between md:mt-5 mt-10 py-5">
-                        <div className="md:flex items-center gap-5 text-[14px]  w-[45%] ">
-                            <img className='w-[100px] border bg-[#f5f5f9] ' src={item.thumbnail} alt="" />
-                            <div className="mt-2 md:mt-0">
-                                <h3 className='font-bold'>{item.title} </h3>
-                                <p>color:Brown</p>
-                                <p>Size:XL</p>
+
+                        <div className="flex md:items-center mb-5 justify-between md:mt-5 mt-10 py-5">
+                            <div className="md:flex items-center gap-5 text-[14px]  w-[45%] ">
+                                <img className='w-[100px] border bg-[#f5f5f9] ' src={item.thumbnail} alt="" />
+                                <div className="mt-2 md:mt-0">
+                                    <h3 className='font-bold'>{item.title} </h3>
+                                    <p>color:Brown</p>
+                                    <p>Size:XL</p>
+                                </div>
                             </div>
+
+                            <p className=' w-[28%] md:text-center'>{item.price} </p>
+
+                            <div className="flex md:items-center gap-2 border bg-[#f5f5f8] h-[20px] md:h-full relative right-5 md:right-0 ">
+                                <p><FaMinus /></p>
+                                <input className='w-[20px] pl-1 ' type="text" placeholder='1' />
+                                <p><FaPlus /></p>
+                            </div>
+
+                            <p className=' w-[20%] text-end '>$219.00</p>
+
                         </div>
-
-                        <p className=' w-[28%] md:text-center'>{item.price} </p>
-
-                        <div className="flex md:items-center gap-2 border bg-[#f5f5f8] h-[20px] md:h-full relative right-5 md:right-0 ">
-                            <p><FaMinus /></p>
-                            <input className='w-[20px] pl-1 ' type="text" placeholder='1' />
-                            <p><FaPlus /></p>
-                        </div>
-
-                        <p className=' w-[20%] text-end '>$219.00</p>
-
-                    </div>
                     ))}
+
 
                     <div className="flex justify-between ">
                         <button className='py-2 px-3 text-white font-josefin rounded-sm bg-biguni'>Update Curt</button>

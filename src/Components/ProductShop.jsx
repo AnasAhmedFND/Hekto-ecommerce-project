@@ -6,6 +6,9 @@ import { LuShoppingCart } from "react-icons/lu";
 import { FiHeart } from "react-icons/fi";
 import {useDispatch, useSelector} from 'react-redux'
 import { addToCart } from './slice/cartSlice';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const ProductShop = () => {
   let shopApiProduct = useContext(apiData)
@@ -76,12 +79,15 @@ const ProductShop = () => {
  let dispatch = useDispatch();
  let hendelAddToCart = (product) => {
   dispatch(addToCart({...product, qty: 1}))
+  toast.success('Added to cart')
  }
 
  
  // menu-resize.......................................
  
- let resizeMenu = useSelector((resize) => resize)
+ 
+ 
+ 
  
 
 
@@ -207,7 +213,8 @@ const ProductShop = () => {
                 <div className=" border md:w-[250px] w-[150px] md:h-[363px] h-[280px] text-center shadow-xl group relative   overflow-hidden ">
                   <img className='border bg-[#f5f5f8] group-hover:bg-[#bad9c899] ' src={item.thumbnail} alt="" />
                   <div className="absolute  top-10 md:top-32 -left-10 md:group-hover:left-5 group-hover:left-3 group-hover:duration-700 group-hover:text-blue-500 ">
-                    <p  onClick={() => hendelAddToCart(item)}><LuShoppingCart /></p>
+                    <p  onClick={() => hendelAddToCart(item)} className='cursor-pointer'><LuShoppingCart /></p>
+                    <ToastContainer />
                     <p className='mt-3'><FiHeart /></p>
                     <p className='mt-3'><FaSearchPlus /></p>
                   </div>
