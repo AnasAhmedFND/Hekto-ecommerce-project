@@ -4,7 +4,7 @@ import { FaMinus } from "react-icons/fa";
 
 import { IoIosCheckmark } from "react-icons/io";
 import { useDispatch, useSelector } from 'react-redux'
-import { increment } from '../slice/cartSlice';
+import { increment, dicrement } from '../slice/cartSlice';
 
 
 const Shopcart = () => {
@@ -16,6 +16,12 @@ const Shopcart = () => {
 
     let hendleIncriment = (item) => {
         dispatch(increment(item))
+    }
+    // Dicriment minus...................
+    let dispatch2 = useDispatch()
+    let hendleDecriment = (item) => {
+        dispatch2(dicrement(item))
+        
     }
 
     return (
@@ -48,12 +54,12 @@ const Shopcart = () => {
                             <p className=' w-[28%] md:text-center'>{item.price} </p>
 
                             <div className="flex md:items-center gap-2 border bg-[#f5f5f8] h-[20px] md:h-full relative right-5 md:right-0 ">
-                                <p><FaMinus /></p>
+                                <p onClick={() => hendleDecriment(index)}><FaMinus /></p>
                                <p className='w-[20px] pl-1 bg-white flex justify-center items-center' >{item.qty} </p>
                                 <p onClick={()=> hendleIncriment(index)}><FaPlus /></p>
                             </div>
 
-                            <p className=' w-[20%] text-end '>{item.qty * item.price} </p>
+                            <p className=' w-[20%] text-end '>{(item.qty * item.price).toFixed(2)} </p>
 
                         </div>
                     ))}
