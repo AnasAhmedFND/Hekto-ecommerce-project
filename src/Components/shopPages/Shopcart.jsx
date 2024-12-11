@@ -4,7 +4,7 @@ import { FaMinus } from "react-icons/fa";
 
 import { IoIosCheckmark } from "react-icons/io";
 import { useDispatch, useSelector } from 'react-redux'
-import { increment, dicrement, deleteProduct, clearCart } from '../slice/cartSlice';
+import { increment, dicrement, deleteProduct, clearCart, totalPrice } from '../slice/cartSlice';
 import { GiCrossedSabres } from "react-icons/gi";
 
 
@@ -35,6 +35,14 @@ const Shopcart = () => {
     const hendleClearCart = () => {
         dispatch(clearCart())
     }
+
+    // total price...............................
+    
+    const hendleTotalPrice = (item) => {
+        dispatch(totalPrice(item))               
+        
+    }
+    
 
 
     return (
@@ -94,7 +102,8 @@ const Shopcart = () => {
                         </div>
                         <div className="flex justify-between items-center font-bold border-b-2 pb-2 mt-5">
                             <p>Totals:</p>
-                            <p>$325.00</p>
+                            
+                            <p onClick={hendleTotalPrice } className='cursor-pointer'>$325 </p>
                         </div>
                         <div className="flex items-center mt-5">
                             <p className='border bg-green-500 text-white rounded-full'><IoIosCheckmark /></p>

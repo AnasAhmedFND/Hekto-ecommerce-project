@@ -75,7 +75,8 @@ const ProductShop = () => {
       setCurrentPage(currentPage + 1)
     }
   }
- 
+//  Add to cart items...................................
+
  let dispatch = useDispatch();
  let hendelAddToCart = (product) => {
   dispatch(addToCart({...product, qty: 1}))
@@ -216,7 +217,7 @@ const ProductShop = () => {
                     <p  onClick={() => hendelAddToCart(item)} className='cursor-pointer'><LuShoppingCart /></p>
                     <ToastContainer
                     position="top-center"
-                    autoClose={1000}
+                    autoClose={2000}
                     hideProgressBar={false}
                     newestOnTop={false}
                     closeOnClick
