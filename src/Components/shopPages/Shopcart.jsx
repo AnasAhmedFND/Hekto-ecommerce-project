@@ -11,6 +11,7 @@ import { GiCrossedSabres } from "react-icons/gi";
 const Shopcart = () => {
 
     let cartData = useSelector((state) => state.cartItmeSlice.cartItems)
+   console.log(cartData);
    
     // increment plus..................................
     let dispatch = useDispatch()

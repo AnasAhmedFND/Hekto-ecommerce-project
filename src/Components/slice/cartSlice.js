@@ -3,12 +3,12 @@ import { createSlice } from '@reduxjs/toolkit'
 export const cartSlice = createSlice({
   name: 'cartItmeSlice', 
   initialState: {
-    cartItems: localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("cart")) : []
+    cartItems: localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : []
   },
   reducers: {
     addToCart: (state, action) => {
             
-      let findProducts = state.cartItems.findIndex((item) => item.id === action.payload.id)
+      let findProducts = state.cartItems.findIndex((item)=>item.id == action.payload.id)
 
      if(findProducts === -1){
        state.cartItems.push(action.payload);
@@ -37,7 +37,7 @@ export const cartSlice = createSlice({
       localStorage.setItem("cart", JSON.stringify(state.cartItems))
     },
     totalPrice: (state, action) => {
-      state.cartItems.reduce(action + payload) 
+      state.cartItems.reduce((action.payload) ) 
       
     }
 
