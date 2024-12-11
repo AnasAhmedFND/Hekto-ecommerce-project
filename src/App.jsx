@@ -27,7 +27,7 @@ function App() {
       <Route path='/social' element={<Social/>} />
       <Route path='/shoplist' element={<Listpage/>} />
       <Route path='/cart' element={<Cart/>} />
-      <Route path='/details' element={<Detailspage/>} />
+      <Route path='/shop/:id' element={<Detailspage />} />
       <Route path='/login' element={<Logings/>} />
 
     </Route>

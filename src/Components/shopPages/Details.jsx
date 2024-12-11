@@ -6,34 +6,39 @@ import { FaRegHeart } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
+import { useParams } from 'react-router-dom';
 
 const Details = () => {
     const DetailsApiData = useContext(apiData)
-    let detailsFilter = DetailsApiData.filter((item) => item.id >= 13 && item.id <= 15);
-    let detailsFilterMain = DetailsApiData.filter((item) => item.id >= 7 && item.id <= 7);
+    const product = useParams()
+   let data= DetailsApiData.filter((item)=> item.id == product.id)
 
-
+    
+    
 
     return (
         <>
             <div className="container mx-auto md:py-20 py-10 ">
 
-                <div className="md:flex md:border   gap-10 p-2 shadow-lg ">
+                <div >
 
-                    <div className="  flex gap-4">
+                    {data.map((item)=>(
+                        <div className="md:flex md:border   gap-10 p-2 shadow-lg ">
+                            <div className="  flex gap-4">
                         <div className=" rounded-sm  w-[100px] flex flex-col gap-2 ">
-                            {detailsFilter.map((item) => (
-                                <img className='  w-full  bg-[#ebebf0] ' src={item.thumbnail} alt="" />
+                            {item.images.map((itemimg) => (
+                                <img className='  w-full  bg-[#ebebf0] ' src={itemimg} alt="" />
                             ))}
                         </div>
                         <div className="md:w-[300px] w-[250px]  rounded-sm border-red-600">
-                            {detailsFilterMain.map((item) => (
+                           
                                 <img className='bg-[#ebebf0] h-full ' src={item.thumbnail} alt="" />
-                            ))}
+                           
                         </div>
                     </div>
+
                     <div className="pt-5 md:pt-0">
-                        <h3 className='text-2xl font-bold font-josefin '>Playwood arm chair</h3>
+                        <h3 className='text-2xl font-bold font-josefin '>{item.title}</h3>
                         <div className="flex items-center gap-5">
                             <div className="flex text-yellow-400">
                                 <p><IoIosStar /></p>
@@ -44,7 +49,7 @@ const Details = () => {
                             </div>
                             <p> (22) </p>
                         </div>
-                        <p className='font-bold mt-2'>$32.00 <span className='text-red-500 pl-5 line-through '>$32.00</span> </p>
+                        <p className='font-bold mt-2'>${item.price}<span className='text-red-500 pl-5 line-through '>${item.price+10 }</span> </p>
                         <p className='font-bold mt-2'>Color</p>
                         <p className='text-[#8f8f97] md:text-[16px] text-[14px] '>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus <br /> porttitor purus, et volutpat sit.</p>
                         <h5 className='flex gap-5 font-bold items-center mt-5 font-josefin '>Add To Cart <FaRegHeart /></h5>
@@ -59,6 +64,14 @@ const Details = () => {
                             </div>
                         </div>
                     </div>
+                        </div>
+                    ))
+
+                    }
+                  
+                    
+
+                    
                 </div>
 
             </div>
