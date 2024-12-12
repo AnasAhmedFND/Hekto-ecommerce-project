@@ -36,6 +36,8 @@ export const cartSlice = createSlice({
       state.cartItems = []
       localStorage.setItem("cart", JSON.stringify(state.cartItems))
     }
+  
+    
    
 
   }

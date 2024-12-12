@@ -39,11 +39,12 @@ const Shopcart = () => {
 
     // total price...............................
     
-    let totalPrice = cartData.reduce((acc, current) => {
-        acc += (current.price * current.qty);
+    let {totalPrice, totalQuantity} = cartData.reduce((acc, current) => {
+        acc.totalPrice += (current.price * current.qty);
+        acc.totalQuantity += current.qty
         return acc
-    }, 0)
-    console.log(totalPrice);
+    }, {totalPrice: 0, totalQuantity: 0})
+    
     
     
 
@@ -104,9 +105,9 @@ const Shopcart = () => {
                             <p>${totalPrice.toFixed(2)}</p>
                         </div>
                         <div className="flex justify-between items-center font-bold border-b-2 pb-2 mt-5">
-                            <p>Totals:</p>
+                            <p>Total Quantity :</p>
                             
-                            <p className='cursor-pointer'>$325 </p>
+                            <p className='cursor-pointer'>{totalQuantity} </p>
                         </div>
                         <div className="flex items-center mt-5">
                             <p className='border bg-green-500 text-white rounded-full'><IoIosCheckmark /></p>
