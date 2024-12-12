@@ -4,7 +4,7 @@ import { FaMinus } from "react-icons/fa";
 
 import { IoIosCheckmark } from "react-icons/io";
 import { useDispatch, useSelector } from 'react-redux'
-import { increment, dicrement, deleteProduct, clearCart, totalPrice } from '../slice/cartSlice';
+import { increment, dicrement, deleteProduct, clearCart } from '../slice/cartSlice';
 import { GiCrossedSabres } from "react-icons/gi";
 
 
@@ -39,10 +39,12 @@ const Shopcart = () => {
 
     // total price...............................
     
-    const hendleTotalPrice = (item) => {
-        dispatch(totalPrice(item))               
-        
-    }
+    let totalPrice = cartData.reduce((acc, current) => {
+        acc += (current.price * current.qty);
+        return acc
+    }, 0)
+    console.log(totalPrice);
+    
     
 
 
@@ -77,9 +79,9 @@ const Shopcart = () => {
                             <p className=' w-[28%] md:text-center'>{item.price} </p>
 
                             <div className="flex md:items-center gap-2 border bg-[#f5f5f8] h-[20px] md:h-full relative right-5 md:right-0 ">
-                                <p onClick={() => hendleDecriment(index)}><FaMinus /></p>
+                                <p onClick={() => hendleDecriment(index)} className='cursor-pointer ' ><FaMinus /></p>
                                <p className='w-[20px] pl-1 bg-white flex justify-center items-center' >{item.qty} </p>
-                                <p onClick={()=> hendleIncriment(index)}><FaPlus /></p>
+                                <p onClick={()=> hendleIncriment(index)} className='cursor-pointer ' ><FaPlus /></p>
                             </div>
 
                             <p className=' w-[20%] text-end '>{(item.qty * item.price).toFixed(2)} </p>
@@ -99,12 +101,12 @@ const Shopcart = () => {
                     <div className="mt-8 border py-8 px-5 bg-[#F6F5FF] rounded-sm ">
                         <div className="flex justify-between items-center font-bold border-b-2 pb-2 ">
                             <p>Subtotals:</p>
-                            <p>$219.00</p>
+                            <p>${totalPrice.toFixed(2)}</p>
                         </div>
                         <div className="flex justify-between items-center font-bold border-b-2 pb-2 mt-5">
                             <p>Totals:</p>
                             
-                            <p onClick={hendleTotalPrice } className='cursor-pointer'>$325 </p>
+                            <p className='cursor-pointer'>$325 </p>
                         </div>
                         <div className="flex items-center mt-5">
                             <p className='border bg-green-500 text-white rounded-full'><IoIosCheckmark /></p>
