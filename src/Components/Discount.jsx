@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { IoMdCheckmark } from "react-icons/io";
-import Shopa from '../assets/shopex/dproduct.png'
+import Shopa from '../assets/charcal.png'
+import { apiData } from './ContextApi';
+import { Link } from 'react-router-dom';
 
 const Discount = () => {
+
+ const discountDataApi = useContext(apiData)
+
+ let filterDiscountItem = discountDataApi.filter((item) => item.id >= 14 && item.id <= 14)
+
   return (
     <>
       <div className="container mx-auto md:py-10">
@@ -12,7 +19,7 @@ const Discount = () => {
             <li className=' hover:text-primary hover:underline  '>Plastic Chair</li>
             <li className=' hover:text-primary hover:underline  '>Sofa Colletion</li>
         </ul>
-        <div className=" md:flex items-center ">
+        <div className=" md:flex md:flex-row items-center flex flex-col-reverse">
             <div className="mt-5 md:mt-0 px-2 md:px-0">
                 <h2 className='text-xl font-bold font-josefin text-[#151875] '>20% Discount Of All Products</h2>
                <h4 className='text-primary text-lg'>Eams Sofa Compact</h4>
@@ -44,13 +51,21 @@ const Discount = () => {
                  </div>               
                
                 </div>
-                <button className='mt-4 py-2 px-10 md:ml-0 ml-20 bg-[#f0237c] text-white rounded-lg '>Shop Now</button>
+                <button className='mt-4 py-2 px-10 md:ml-0 ml-20 bg-[#f0237c] text-white rounded-lg '><Link to='/shop' > Shop Now</Link></button>
 
 
             </div>
-                <div className="">
-                    <img className='w-[500px] ' src={Shopa} alt="" />
+            <div className="md:ml-5">
+
+            {filterDiscountItem.map((item) => (
+
+                <div className="relative">
+                    <img className='w-[500px] ' src={item.thumbnail} alt="" />
+
+                    <img className='absolute top-12 left-6 -z-10 w-[90%] ' src={Shopa} alt="" />
                 </div>           
+            ))}
+            </div>
 
         </div>
       </div>

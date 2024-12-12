@@ -61,7 +61,7 @@ const Shopcart = () => {
                     </ul>
                          
 
-                    {/* {cartData.map((item,index) => (
+                    {cartData.map((item,index) => (
 
                         <div className="flex md:items-center mb-5 justify-between md:mt-5 mt-10 py-5">
                             <div className="md:flex items-center gap-5 text-[14px]  w-[45%] relative ">
@@ -85,7 +85,7 @@ const Shopcart = () => {
                             <p className=' w-[20%] text-end '>{(item.qty * item.price).toFixed(2)} </p>
 
                         </div>
-                    ))} */}
+                    ))}
 
 
                     <div className="flex justify-between pt-5">

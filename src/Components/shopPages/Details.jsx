@@ -49,12 +49,12 @@ const Details = () => {
                             </div>
                             <p> (22) </p>
                         </div>
-                        <p className='font-bold mt-2'>${item.price}<span className='text-red-500 pl-5 line-through '>${item.price+10 }</span> </p>
+                        <p className='font-bold mt-2'>${item.price}<span className='text-red-500 pl-5 line-through '>${item.discountPercentage }</span> </p>
                         <p className='font-bold mt-2'>Color</p>
                         <p className='text-[#8f8f97] md:text-[16px] text-[14px] '>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus <br /> porttitor purus, et volutpat sit.</p>
                         <h5 className='flex gap-5 font-bold items-center mt-5 font-josefin '>Add To Cart <FaRegHeart /></h5>
-                        <p className=' font-josefin mt-3 '>Categories:</p>
-                        <p className=' font-josefin mt-2'>Tags</p>
+                        <p className=' font-josefin mt-3  '><span className='font-bold'>Categories :</span>  {item.category}</p>
+                        <p className=' font-josefin mt-2'><span className='font-bold'>Tags :</span>  {item.tags} </p>
                         <div className="flex gap-5 items-center mt-2">
                             <p className=' font-josefin'>Share</p>
                             <div className="flex gap-3">

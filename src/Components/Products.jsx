@@ -4,6 +4,8 @@ import { FaRegHeart } from "react-icons/fa6";
 import { FaSearchPlus } from "react-icons/fa";
 import Sale from '../assets/sale.png'
 import { apiData } from './ContextApi';
+import Viewdetails from './button/Viewdetails';
+import { Link } from 'react-router-dom';
 
 
 const Products = () => {
@@ -28,16 +30,16 @@ const Products = () => {
        { produc.map((item) => (
 
         <div className=" relative group overflow-hidden  ">
-         <div className=" md:w-[230px] w-[150px]        ">
-            <img className=' border bg-[#f5f5f8]  w-full pt-3 ' src={item.thumbnail} alt="" />
+         <div className=" md:w-[230px] w-[150px]     ">
+            <img className=' border bg-[#f5f5f8]  w-full pt-3 pb-8  ' src={item.thumbnail} alt="" />
 
-           <img className='absolute top-1 md:top-5 -left-24 group-hover:left-2 duration-700 md:w-[70px] w-[50px]           ' src={Sale} alt="" />
+           <img className='absolute top-1 md:top-5 -left-24 group-hover:left-2 duration-700 md:w-[70px] w-[50px]  ' src={Sale} alt="" />
+            <button className='absolute bottom-14 -left-16 group-hover:left-1/2 -translate-x-1/2 duration-700 ease-in-out '><Link to={`/shop/${item.id}`}> <Viewdetails/> </Link>  </button>
             
-            <div className="flex justify-between py-2">
+            <div className="flex justify-between py-2 z-20  ">
                 <p className='md:text-[12px] text-[10px] md:border-b md:pb-1 '>Comfort Handy Craft</p>
                 <p className='text-[12px]   '>${item.price} <span className='text-primary'> ${item.discountPercentage}</span></p>
             </div>
-
          </div>
 
          <div className="absolute top-20 md:top-28 -left-5 group-hover:left-2 duration-700 flex flex-col gap-2 md:gap-5    ">
