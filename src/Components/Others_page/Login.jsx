@@ -9,6 +9,8 @@ const Login = () => {
     let [password, setPassword] = useState('')
    
     let [errorMessage, setErrorMessage] = useState('')
+    let [errorMessage2, setErrorMessage2] = useState('')
+
 
 
     
@@ -18,8 +20,27 @@ const Login = () => {
     }    
     
 
-    const handleSubmit = () => {        
-        createUserWithEmailAndPassword(auth, email, password)
+    const handleSubmit = () => {    
+        
+        if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
+            setErrorMessage('Email your rong!');
+            
+        }
+
+        if(!password) {
+            setErrorMessage2('password your rong!')
+        }else if(!/(?=.*[a-z])/.test(password)){
+            setErrorMessage2('password in lowercase add.')
+         }else if(!/(?=.*[A-Z])/.test(password)){
+            setErrorMessage2('password in uppercase add.')
+         }else if(!/(?=.*[0-9])/.test(password)){
+            setErrorMessage2('password in Number add.')
+         }else if(!/(?=.*[!@#$%^&*])/.test(password)){
+            setErrorMessage2('password in special character add.')
+         }else if(!/(?=.{8,})/.test(password)){
+            setErrorMessage2('must be eight characters password .')
+         }else{
+            createUserWithEmailAndPassword(auth, email, password)
             .then(() => {
                console.log('Authentication Done');
                
@@ -35,6 +56,9 @@ const Login = () => {
                 }
                
             });
+         }
+
+        
 
     }
 
@@ -49,10 +73,13 @@ const Login = () => {
                     <div className="">
                         <input onChange={(e)=>setEmail(e.target.value )} className='border mt-8 p-2 w-full rounded-md ' type="text" placeholder='Email Address' />
                         { errorMessage &&
-                            <p className='bg-biguni py-1 pl-2 rounded-md text-white'>{errorMessage} </p>
+                            <p className='bg-biguni py-1 pl-2 rounded-md text-white  mt-1'>{errorMessage} </p>
 
                         }
                         <input onChange={(e)=>setPassword(e.target.value )} className='border mt-5 p-2 w-full rounded-md ' type="password" placeholder='Password' />
+                        {errorMessage2 && 
+                            <p className='border bg-biguni py-1 pl-2 rounded-md text-white mt-1'>{errorMessage2} </p>
+                        }
                     </div>
                     <p className='mt-4 text-[#4d4d5d]'>Forgot Your Password?</p>
                     <button onClick={() => handleSubmit()} className='border py-2 text-center bg-biguni mt-8 text-white w-full rounded-md font-bold font-josefin'>Sign in</button>
