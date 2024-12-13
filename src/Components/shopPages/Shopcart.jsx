@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaPlus } from "react-icons/fa6";
 import { FaMinus } from "react-icons/fa";
 
@@ -38,6 +38,7 @@ const Shopcart = () => {
         dispatch(clearCart())
     }
 
+    
     // total price...............................
     
     let {totalPrice, totalQuantity} = cartData.reduce((acc, current) => {
@@ -45,7 +46,6 @@ const Shopcart = () => {
         acc.totalQuantity += current.qty
         return acc
     }, {totalPrice: 0, totalQuantity: 0})
-    
     
     
 
@@ -68,7 +68,7 @@ const Shopcart = () => {
 
                     cartData.map((item,index) => (
 
-                        <div className="flex md:items-center mb-5 justify-between md:mt-5 mt-10 py-5">
+                        <div className="flex md:items-center mb-5 justify-between md:mt-5 mt-10 py-5 relative">
                             <div className="md:flex items-center gap-5 text-[14px]  w-[45%] relative ">
                                 <img className='w-[100px] border bg-[#f5f5f9] ' src={item.thumbnail} alt="" />
                                 <p onClick={() => hendleFromProduct(index) } className='absolute -top-2 left-20 border h-8 w-8 rounded-full flex justify-center items-center bg-[#e3e3ea] hover:bg-biguni hover:text-white '><GiCrossedSabres /></p>
@@ -88,7 +88,8 @@ const Shopcart = () => {
                             </div>
 
                             <p className=' w-[20%] text-end '>{(item.qty * item.price).toFixed(2)} </p>
-
+                            
+                           
                         </div>
                     ))
 
