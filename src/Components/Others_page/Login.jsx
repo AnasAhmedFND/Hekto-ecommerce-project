@@ -10,21 +10,24 @@ const Login = () => {
    
     let [errorMessage, setErrorMessage] = useState('')
 
+
+    
     const handleEmail = (e) => {
         setEmail (e.target.value)
+        setErrorMessage('')
     }    
     
 
-    const handleSubmit = () => {
-
-        const auth = getAuth();
+    const handleSubmit = () => {        
         createUserWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
+            .then(() => {
                console.log('Authentication Done');
                
             })
             .catch((error) => {
+
                 const err = error.code
+                
                 if(err.includes('auth/invalid-email')){
                     setErrorMessage("Email is not valid")
                 }else{
@@ -34,10 +37,6 @@ const Login = () => {
             });
 
     }
-
-
-
-
 
 
     return (
