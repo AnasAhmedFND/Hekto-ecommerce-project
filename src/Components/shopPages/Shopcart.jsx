@@ -6,6 +6,7 @@ import { IoIosCheckmark } from "react-icons/io";
 import { useDispatch, useSelector } from 'react-redux'
 import { increment, dicrement, deleteProduct, clearCart } from '../slice/cartSlice';
 import { GiCrossedSabres } from "react-icons/gi";
+import { Link } from 'react-router-dom';
 
 
 const Shopcart = () => {
@@ -63,8 +64,9 @@ const Shopcart = () => {
 
                     </ul>
                          
+                    {cartData.length > 0 ?
 
-                    {cartData.map((item,index) => (
+                    cartData.map((item,index) => (
 
                         <div className="flex md:items-center mb-5 justify-between md:mt-5 mt-10 py-5">
                             <div className="md:flex items-center gap-5 text-[14px]  w-[45%] relative ">
@@ -88,16 +90,24 @@ const Shopcart = () => {
                             <p className=' w-[20%] text-end '>{(item.qty * item.price).toFixed(2)} </p>
 
                         </div>
-                    ))}
+                    ))
+
+                    :
+                    <button className='bg-biguni py-2 px-3 text-white rounded-sm relative left-[70%] top-[60px] '><Link to='/shop' >Go To Shop</Link> </button>
+
+                    }
 
 
-                    <div className="flex justify-between pt-5">
+                    <div className="flex justify-between pt-5 ">
                         <button className='py-2 px-3 text-white font-josefin rounded-sm bg-biguni'>Update Curt</button>
+
+                        {cartData.length > 0 &&
                         <button onClick={hendleClearCart} className='py-2 px-3 text-white font-josefin rounded-sm bg-biguni'>Cleat Curt</button>
+                         }
                     </div>
                 </div>
 
-                <div className=" md:w-[35%] pb-10 ">
+                <div className=" md:w-[35%] pb-10 md:mt-0 mt-10 ">
                     <h2 className='text-center font-bold text-xl font-josefin'>Cart Totals</h2>
                     <div className="mt-8 border py-8 px-5 bg-[#F6F5FF] rounded-sm ">
                         <div className="flex justify-between items-center font-bold border-b-2 pb-2 ">

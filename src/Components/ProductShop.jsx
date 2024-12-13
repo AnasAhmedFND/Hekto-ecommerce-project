@@ -217,7 +217,7 @@ const ProductShop = () => {
                     <p  onClick={() => hendelAddToCart(item)} className='cursor-pointer'><LuShoppingCart /></p>
                     <ToastContainer
                     position="top-center"
-                    autoClose={2000}
+                    autoClose={1000}
                     hideProgressBar={false}
                     newestOnTop={false}
                     closeOnClick
