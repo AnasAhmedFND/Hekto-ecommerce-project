@@ -37,13 +37,13 @@ const Navbar = () => {
     <>
     <div className="px-2 md:px-0">
 
-      <div className={`flex md:justify-between md:px-20 md:py-5 py-3 md:items-center gap-5 ${menuShow ? 'pb-40' : 'pb-3'}`}>
+      <div className={`flex md:justify-between md:px-20 md:py-5 py-3 md:items-center gap-5 ${menuShow ? 'pb-60' : 'pb-3'}`}>
         <div className="">
         <Link to='/' ><img  src={Logo} alt="" />  </Link>          
         </div>
 
         <div className="md:flex md:justify-between  w-[80%] ">
-          <ul className={`md:flex md:gap-5 font-lato items-center   md:static  ${menuShow ? 'absolute top-24 left-34 pb-44 ' : 'absolute top-0 -left-72'}`}>
+          <ul className={`md:flex md:gap-5  font-lato items-center md:static md:border-none border md:bg-white bg-[#161651] md:text-black text-white md:px-0 px-2  ${menuShow ? 'absolute top-32 left-2 pb-14 ' : 'absolute top-0 -left-72'}`}>
             <li className='hover:text-primary'><Link to='/'>Home</Link></li>
             <li className='hover:text-primary'> Pages </li>
             <li className='hover:text-primary'><Link to='/product'>Products</Link> </li>
@@ -56,13 +56,13 @@ const Navbar = () => {
                 <div className="relative">
 
                   <div className="">
-                    <input onChange={handleInput} className='border border-black outline-none ' type="Search" />
+                    <input onChange={handleInput} className='border border-black outline-none text-black ' type="Search" />
                   </div>
                   <div className="absolute z-20 top-8 left-0  ">
                     {searchFilterProduct.map((item) => (
                       <div className="flex border bg-white items-center cursor-pointer">
                         <img className='w-[40px] ' src={item.thumbnail} alt="" />
-                        <h5 className='  rounded-sm bg-white px-1 text-[12px] '>{item.title} </h5>
+                        <h5 className='  rounded-sm bg-white px-1 text-[12px] text-black'>{item.title} </h5>
                       </div>
                     ))}
                   </div>
@@ -76,7 +76,7 @@ const Navbar = () => {
         </div>
 
         <div onClick={handleMenu} className="md:hidden">
-          {menuShow === true ? <RxCross2 /> : <IoMenu />}
+          {menuShow === true ? <RxCross2 className='text-[25px] ' /> : <IoMenu className='text-[25px] ' />}
         </div>
 
 

@@ -23,10 +23,12 @@ const Login = () => {
     const handleSubmit = () => {    
         
         if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
-            setErrorMessage('Email your rong!');
+            setErrorMessage('')
+            
+        }else if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
+            setErrorMessage('Email your rong!')
             
         }
-
         if(!password) {
             setErrorMessage2('password your rong!')
         }else if(!/(?=.*[a-z])/.test(password)){
@@ -39,7 +41,9 @@ const Login = () => {
             setErrorMessage2('password in special character add.')
          }else if(!/(?=.{8,})/.test(password)){
             setErrorMessage2('must be eight characters password .')
-         }else{
+         }
+         
+            
             createUserWithEmailAndPassword(auth, email, password)
             .then(() => {
                console.log('Authentication Done');
@@ -49,14 +53,11 @@ const Login = () => {
 
                 const err = error.code
                 
-                if(err.includes('auth/invalid-email')){
-                    setErrorMessage("Email is not valid")
-                }else{
-                    setErrorMessage('')
-                }
+              console.log(err);
+              
                
             });
-         }
+         
 
         
 
