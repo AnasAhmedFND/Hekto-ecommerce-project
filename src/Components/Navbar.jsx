@@ -43,7 +43,7 @@ const Navbar = () => {
         </div>
 
         <div className="md:flex md:justify-between  w-[80%] ">
-          <ul className={`md:flex md:gap-5  font-lato items-center md:static md:border-none border md:bg-white bg-[#161651] md:text-black text-white md:px-0 px-2  ${menuShow ? 'absolute top-32 left-2 pb-14 ' : 'absolute top-0 -left-72'}`}>
+          <ul className={`md:flex md:gap-5  font-lato items-center md:static md:border-none border md:bg-white bg-[#161651] md:text-black text-white md:px-0 px-2 duration-700 ease-linear ${menuShow ? 'absolute top-32 left-2 pb-14 ' : 'absolute top-0 -left-72'}`}>
             <li className='hover:text-primary'><Link to='/'>Home</Link></li>
             <li className='hover:text-primary'> Pages </li>
             <li className='hover:text-primary'><Link to='/product'>Products</Link> </li>

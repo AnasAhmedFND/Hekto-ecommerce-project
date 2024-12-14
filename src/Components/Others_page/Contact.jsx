@@ -5,11 +5,11 @@ import Cont from '../img/contact_ph.png'
 const Contact = () => {
     return (
         <>
-            <div className="container mx-auto py-20">
-                <div className="flex">
-                    <div className=" w-1/2 py-5 px-2">
+            <div className="container mx-auto md:py-20 py-10">
+                <div className="md:flex">
+                    <div className=" md:w-1/2 py-5 px-2">
                         <h2 className='font-bold text-2xl font-josefin text-orgain  '>Information About Us</h2>
-                        <p className='text-[14px] pt-2 '>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis neque ultrices <br /> mattis aliquam, malesuada diam est. Malesuada sem tristique amet erat vitae <br /> eget dolor lobortis. Accumsan faucibus vitae lobortis quis bibendum quam.</p>
+                        <p className='md:text-[14px]  pt-2 '>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis neque ultrices <br /> mattis aliquam, malesuada diam est. Malesuada sem tristique amet erat vitae <br /> eget dolor lobortis. Accumsan faucibus vitae lobortis quis bibendum quam.</p>
                         <div className="flex gap-3 mt-5">
                         <p className='w-5 h-5 bg-blue-700 rounded-full'></p>
                         <p className='w-5 h-5 bg-[#fb24ba] rounded-full'></p>
@@ -18,7 +18,7 @@ const Contact = () => {
 
                         </div>
                     </div>
-                    <div className="w-1/2  py-5 px-2">
+                    <div className="md:w-1/2  py-5 px-2">
                         <h2 className='font-bold text-2xl font-josefin text-orgain'>Contadct Way</h2>
                         <div className=" flex justify-between mt-5">
                             <div className="flex w-1/2  gap-2 items-center">
@@ -43,14 +43,14 @@ const Contact = () => {
                     </div>
                 </div>
 
-                <div className="pt-20 pb-10 flex">
-                    <div className=" w-1/2">
+                <div className="md:pt-20 pt-10 pb-10 md:flex md:flex-row flex flex-col-reverse">
+                    <div className=" md:w-1/2 md:px-0 px-2">
                         <h2 className='font-bold text-2xl font-josefin text-orgain '>Get In Touch</h2>
                         <p className='text-[14px] mt-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis neque ultrices <br /> tristique amet erat vitae eget dolor los vitae lobortis quis bibendum quam.</p>
                         <div className=" mt-5">
-                            <div className="flex justify-between">
-                                <input className='border-2 w-[48%] py-2 pl-2 outline-none rounded-md  ' type="text" placeholder='Your Name*' />
-                                <input className='border-2 w-[48%] py-2 pl-2 outline-none rounded-md  ' type="text" placeholder='Your E-mail' />
+                            <div className="md:flex justify-between">
+                                <input className='border-2 md:w-[48%] w-full py-2 pl-2 outline-none rounded-md  ' type="text" placeholder='Your Name*' />
+                                <input className='border-2 md:w-[48%] w-full py-2 pl-2 outline-none rounded-md md:mt-0 mt-5 ' type="text" placeholder='Your E-mail' />
 
                             </div>
                             <input className='border-2 w-full py-2 pl-2 mt-8 outline-none rounded-md  ' type="text" placeholder='Subject*' />
@@ -58,7 +58,7 @@ const Contact = () => {
                             <button className='borded bg-biguni py-2 px-5 text-white rounded-md mt-5'>Send Mail</button>
                         </div>
                     </div>
-                    <div className="w-1/2 ">
+                    <div className=" md:w-1/2 px-2 md:px-0 md:mr-0 mr-1 ">
                         <img src={Cont} alt="" />
                     </div>
                 </div>
