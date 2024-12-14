@@ -14,6 +14,7 @@ import Cart from './pages/Cart'
 import Detailspage from './pages/Detailspage'
 import Logings from './pages/Logings'
 import Contact_page from './pages/Contact_page'
+import About_page from './pages/About_page'
 
 
 
@@ -23,13 +24,14 @@ function App() {
     <Route element={<Rooted/>}>
       <Route path='/' element={<Home/>} />
       <Route path='/shop' element={<Shop/>} />
-      <Route path='/blog' element={<Blog/>} />
+      <Route path='/blog' element={<Blog/>} />      
       <Route path='/product' element={<TwoTrending/>} />      
       <Route path='/contact' element={<Contact_page/>} />
       <Route path='/shoplist' element={<Listpage/>} />
       <Route path='/cart' element={<Cart/>} />
       <Route path='/shop/:id' element={<Detailspage />} />
       <Route path='/login' element={<Logings/>} />
+      <Route path='/about' element={<About_page/>} />
 
     </Route>
 
