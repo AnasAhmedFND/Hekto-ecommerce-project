@@ -80,7 +80,7 @@ const Featured = () => {
                     <p onClick={() => hendelAddToCart(item)} className='border p-2 rounded-full bg-[#e1e1eb] text-blue-400 cursor-pointer'><RiShoppingCartLine />  </p>
                     <ToastContainer
                       position="top-center"
-                      autoClose={2000}
+                      autoClose={1000}
                       hideProgressBar={false}
                       newestOnTop={false}
                       closeOnClick
