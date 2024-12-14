@@ -13,6 +13,7 @@ import Listpage from './pages/Listpage'
 import Cart from './pages/Cart'
 import Detailspage from './pages/Detailspage'
 import Logings from './pages/Logings'
+import Contact_page from './pages/Contact_page'
 
 
 
@@ -24,7 +25,7 @@ function App() {
       <Route path='/shop' element={<Shop/>} />
       <Route path='/blog' element={<Blog/>} />
       <Route path='/product' element={<TwoTrending/>} />      
-      <Route path='/social' element={<Social/>} />
+      <Route path='/contact' element={<Contact_page/>} />
       <Route path='/shoplist' element={<Listpage/>} />
       <Route path='/cart' element={<Cart/>} />
       <Route path='/shop/:id' element={<Detailspage />} />

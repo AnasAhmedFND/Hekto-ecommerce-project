@@ -49,7 +49,7 @@ const Navbar = () => {
             <li className='hover:text-primary'><Link to='/product'>Products</Link> </li>
             <li className='hover:text-primary'><Link to='/blog' >Blog</Link></li>
             <li className='hover:text-primary'><Link to='/shop' >Shop</Link> </li>
-            <li className='hover:text-primary'><Link to='/social'>Contact</Link></li>
+            <li className='hover:text-primary'><Link to='/contact'>Contact</Link></li>
             <li className='md:ml-72 '>
               <div className="flex ">
 

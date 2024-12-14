@@ -18,13 +18,14 @@ const Header = () => {
 
   return (
     <>
+    
       <div className=" md:flex-row flex  flex-col md:justify-between border items-center md:px-20 px-2 py-4 bg-[#7E33E0] text-white  ">       
             <div className="flex  gap-10 items-center">                      
             <p className='flex items-center gap-2  '><MdMailOutline /> mhhasanul@gmail.com</p>                         
             <p  className='flex items-center gap-2  '><MdAddCall /> (12345)67890</p>            
             </div>        
 
-         <div className="flex md:gap-5 gap-4 items-center ">
+         <div className="flex md:gap-5 gap-4 items-center md:mt-0 mt-2 ">
             <select className='bg-[#7E33E0] border-none outline-none ' name="langu" id="eng">
               <option value="Enaglish">English</option>
               <option value="Enaglish">বাংলা</option>

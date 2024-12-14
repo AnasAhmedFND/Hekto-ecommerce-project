@@ -13,7 +13,8 @@ export default {
         'biguni':'#FB2E86'
       },
       textColor:{
-        'primary':'#FB2E86'
+        'primary':'#FB2E86',
+        'orgain': '#151875'
       },
 
       fontFamily:{
