@@ -24,7 +24,11 @@ export const cartSlice = createSlice({
       
     },
     dicrement: (state, action) => {       
+       if(state.cartItems[action.payload].qty !== 1)
+       {
         state.cartItems[action.payload].qty -= 1;
+      }
+        
         localStorage.setItem("cart", JSON.stringify(state.cartItems))
       
      
