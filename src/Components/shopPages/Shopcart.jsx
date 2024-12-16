@@ -124,7 +124,7 @@ const Shopcart = () => {
                             <p className='border bg-green-500 text-white rounded-full'><IoIosCheckmark /></p>
                             <p> Shipping & taxes calculated at checkout</p>
                         </div>
-                        <button className='bg-green-600 text-white py-2 w-full text-center rounded-md mt-8'>Proceed To Checkout</button>
+                        <button className='bg-green-600 text-white py-2 w-full text-center rounded-md mt-8'><Link to='/complete' >Proceed To Checkout</Link> </button>
                     </div>
                     <h2 className='font-bold text-xl font-josefin mt-8 text-center'>Calculate Shopping</h2>
                     <div className="mt-5 border py-8 px-5 bg-[#F6F5FF] rounded-sm">

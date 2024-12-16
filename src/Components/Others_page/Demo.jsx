@@ -8,32 +8,33 @@ const Demo = () => {
     let demofilter = demoData.filter((item) => item.id >= 98 && item.id <= 101)
   return (
     <>
-      <div className="container mx-auto py-20  flex justify-between">
-        <div className="w-[60%] ">
+      <div className="container mx-auto md:py-20 py-10  md:flex md:justify-between">
+        <div className="md:w-[60%] px-2 md:px-0">
             <h2 className='font-bold font-josefin text-2xl text-orgain'>Hekto Demo</h2>
             <p className='mt-2'>Cart/ Information/ Shipping/ Payment</p>
-            <div className=" bg-[#F8F8FD] mt-5 py-14 px-4">
+            <div className=" bg-[#F8F8FD] mt-5 md:py-14 py-7 px-4">
 
-                <div className="flex justify-between mt-5 items-center">
-                <h3 className='font-bold font-josefin'>Contact Information</h3>
+                <div className="md:flex justify-between mt-5 items-center">
+                <h3 className='font-bold font-josefin md:text[14px] text-[20px] '>Contact Information</h3>
                 <p className='text-[12px] text-[#50505e] '>Already have an account? Log in</p>
                 </div>
-                <input className='mt-10 border-b-2 pb-2 w-full bg-[#F8F8FD] px-2' type="text" placeholder='Email or mobile phone number' />
+
+                <input className='md:mt-10 mt-5 border-b-2 pb-2 w-full bg-[#F8F8FD] px-2' type="text" placeholder='Email or mobile phone number' />
 
                 <p className='flex items-center mt-5 text-[14px] gap-3 '><IoIosCheckmark className='border text-[20px] rounded-sm bg-green-500 text-white  ' /> Keep me up to date on news and excluive offers</p>
 
 
-                <h3 className='font-bold font-josefin mt-20'>Shipping address</h3>
-                <div className=" flex justify-between mt-5">
-                    <input className='w-[48%] border-b-2 pb-2 bg-[#F8F8FD] px-2 ' type="text" placeholder='First name (optional)' />
-                    <input className='w-[48%] border-b-2 pb-2 bg-[#F8F8FD] px-2 ' type="text" placeholder='Last name' />
+                <h3 className='font-bold font-josefin md:mt-20 mt-10 md:text[14px] text-[20px]  '>Shipping address</h3>
+                <div className=" md:flex justify-between mt-5">
+                    <input className='w-full md:w-[48%] border-b-2 pb-2 bg-[#F8F8FD] px-2 ' type="text" placeholder='First name (optional)' />
+                    <input className='w-full md:w-[48%] border-b-2 pb-2 bg-[#F8F8FD] px-2 md:mt-0 mt-5 ' type="text" placeholder='Last name' />
                 </div>
                 <input className='border-b-2 pb-2 mt-5 w-full bg-[#F8F8FD] px-2 ' type="text" placeholder='Address' />
                 <input className='border-b-2 pb-2 mt-5 w-full bg-[#F8F8FD] px-2 ' type="text" placeholder='Appaetnentment,suit,e.t.c (optinal)'/>
                 <input className='border-b-2 pb-2 mt-5 w-full bg-[#F8F8FD] px-2 ' type="text" placeholder='City' />
-                <div className="flex justify-between mt-5">
-                    <input className='w-[48%] border-b-2 pb-2 bg-[#F8F8FD] px-2 ' type="text" placeholder='Bangladesh (Cuntry)' />
-                    <input className='w-[48%] border-b-2 pb-2 bg-[#F8F8FD] px-2 ' type="text" placeholder='postal Code' />
+                <div className="md:flex justify-between mt-5">
+                    <input className='w-full md:w-[48%] border-b-2 pb-2 bg-[#F8F8FD] px-2 ' type="text" placeholder='Bangladesh (Cuntry)' />
+                    <input className='w-full md:w-[48%] border-b-2 pb-2 bg-[#F8F8FD] px-2 md:mt-0 mt-5 ' type="text" placeholder='postal Code' />
                 </div>
 
                 <button className='py-2 px-5 bg-biguni font-josefin text-white mt-16 rounded-sm'>Continue Shipping</button>
@@ -41,7 +42,7 @@ const Demo = () => {
         </div>
 
 
-        <div className="w-[37%] ">
+        <div className="md:w-[37%] px-2 md:px-0 md:mt-0 mt-10 ">
             <div className="px-2">
 
             {demofilter.map((item) => (

@@ -17,6 +17,7 @@ import Contact_page from './pages/Contact_page'
 import About_page from './pages/About_page'
 import Blog_page from './pages/Blog_page'
 import Demo_page from './pages/Demo_page'
+import Complet_page from './pages/Complet_page'
 
 
 
@@ -35,6 +36,7 @@ function App() {
       <Route path='/login' element={<Logings/>} />
       <Route path='/about' element={<About_page/>} />
       <Route path='/demo' element={<Demo_page/>} />
+      <Route path='/complete' element={<Complet_page/>} />
       
 
     </Route>
