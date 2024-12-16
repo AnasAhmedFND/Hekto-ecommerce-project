@@ -25,22 +25,23 @@ const Login = () => {
         if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
             setErrorMessage('')
             
-        }else if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
+        }else if(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
             setErrorMessage('Email your rong!')
             
         }
         if(!password) {
             setErrorMessage2('password your rong!')
-        }else if(!/(?=.*[a-z])/.test(password)){
+        }        
+        else if(!/(?=.*[a-z])/.test(password)){
             setErrorMessage2('password in lowercase add.')
          }else if(!/(?=.*[A-Z])/.test(password)){
             setErrorMessage2('password in uppercase add.')
          }else if(!/(?=.*[0-9])/.test(password)){
             setErrorMessage2('password in Number add.')
-         }else if(!/(?=.*[!@#$%^&*])/.test(password)){
-            setErrorMessage2('password in special character add.')
          }else if(!/(?=.{8,})/.test(password)){
-            setErrorMessage2('must be eight characters password .')
+            setErrorMessage2('password in eight characters.')
+         }else if(/(?=.{8,})/.test(password)){
+            setErrorMessage2(' ')
          }
          
             
@@ -56,10 +57,7 @@ const Login = () => {
               console.log(err);
               
                
-            });
-         
-
-        
+            });                
 
     }
 
@@ -79,7 +77,7 @@ const Login = () => {
                         }
                         <input onChange={(e)=>setPassword(e.target.value )} className='border mt-5 p-2 w-full rounded-md ' type="password" placeholder='Password' />
                         {errorMessage2 && 
-                            <p className='border bg-biguni py-1 pl-2 rounded-md text-white mt-1'>{errorMessage2} </p>
+                            <p className=' bg-biguni py-1 pl-2 rounded-md text-white mt-1'>{errorMessage2} </p>
                         }
                     </div>
                     <p className='mt-4 text-[#4d4d5d]'>Forgot Your Password?</p>
