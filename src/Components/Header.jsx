@@ -26,12 +26,12 @@ const Header = () => {
             </div>        
 
          <div className="flex md:gap-5 gap-4 items-center md:mt-0 mt-2 ">
-            <select className='bg-[#7E33E0] border-none outline-none ' name="langu" id="eng">
+            <select className='bg-[#7E33E0] border-none outline-none cursor-pointer ' name="langu" id="eng">
               <option value="Enaglish">English</option>
               <option value="Enaglish">বাংলা</option>
 
               </select>           
-            <select className='bg-[#7E33E0] border-none outline-none ' name="#" id="usd">
+            <select className='bg-[#7E33E0] border-none outline-none cursor-pointer ' name="#" id="usd">
               <option value="#">USD</option>
               <option value="#">BDT</option>
             </select>

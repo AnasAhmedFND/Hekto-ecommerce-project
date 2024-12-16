@@ -84,7 +84,7 @@ const Blog_right = () => {
                 <div className="flex gap-5 pt-2 ">
                   <p className='text-[#35c0ea] '><FaHeartPulse /></p>
                   <p><FaSearchPlus /></p>
-                  <p onClick={() => hendelAddToCart(item)} className='text-primary'><TiShoppingCart /></p>
+                  <p onClick={() => hendelAddToCart(item)} className='text-primary cursor-pointer'><TiShoppingCart /></p>
                   <ToastContainer
                     position="top-center"
                     autoClose={1000}
@@ -104,21 +104,36 @@ const Blog_right = () => {
           ))}
 
           <h2 className='font-bold font-josefin text-2xl text-orgain mt-6'>Sale Product</h2>
+          <div className="mt-5">
+
           {sale.map((item) => (
-            <div className="flex gap-2 mt-5 ">
+            <div className="flex gap-2 mb-2 ">
               <img className='w-[80px] border bg-[#bde3e3] mb-2 rounded-sm ' src={item.thumbnail} alt="" />
               <div className="">
                 <h5>Elit ornare in enim mauris.</h5>
                 <p>Dec 15 2024</p>
                 <div className="flex gap-5 pt-2 ">
-                  <p className='text-primary'><TiShoppingCart /></p>
                   <p className='text-[#35c0ea] '><FaHeartPulse /></p>
                   <p><FaSearchPlus /></p>
+                  <p onClick={() => hendelAddToCart(item)} className='text-primary cursor-pointer'><TiShoppingCart /></p>
+                  <ToastContainer
+                    position="top-center"
+                    autoClose={1000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="light"
+                  />
                 </div>
               </div>
             </div>
 
           ))}
+          </div>
 
           <h2 className='font-bold font-josefin text-2xl text-orgain mt-5 '>offer Product</h2>
           <div className="flex flex-wrap justify-between mt-2">
@@ -129,9 +144,21 @@ const Blog_right = () => {
                 <h5>{item.title}</h5>
                 <p>${item.price} - ${item.discountPercentage} </p>
                 <div className="absolute top-2  -left-22  duration-1000 ease-out group-hover:left-2 -z-20 group-hover:z-10  flex flex-col gap-3 pt-2 ">
-                  <p className=' text-primary'><TiShoppingCart /></p>
                   <p className='text-[#35c0ea] '><FaHeartPulse /></p>
                   <p><FaSearchPlus /></p>
+                  <p onClick={()=> hendelAddToCart(item)} className=' text-primary cursor-pointer'><TiShoppingCart /></p>
+                  <ToastContainer
+                    position="top-center"
+                    autoClose={1000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="light"
+                  />
                 </div>
               </div>
 

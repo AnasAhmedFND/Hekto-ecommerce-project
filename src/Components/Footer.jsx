@@ -3,6 +3,7 @@ import Logo from '../assets/Logo.png'
 import { MdFacebook } from "react-icons/md";
 import { FaInstagram } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
+import { Link } from 'react-router-dom';
 
 
 const Footer = () => {
@@ -13,7 +14,7 @@ const Footer = () => {
            <img src={Logo} alt="" />
            <div className="mt-10 flex">
            <input className='rounded-md p-2 md:w-[60%]' type="text" placeholder='Rnter Email Address' />
-           <button className='border md:w-28 p-2 bg-biguni rounded-md text-white'>Sign Up</button>
+           <button className='border md:w-28 p-2 bg-biguni  rounded-md text-white'><Link to='/login' > Sign Up</Link></button>
            </div>
            <p className='mt-5'>Contact info <br />17 Princess Road, London, Greater London NW1 8JR,UK</p>
         </div>
