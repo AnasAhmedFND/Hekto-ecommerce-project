@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { Link } from 'react-router-dom';
+
 const Login = () => {
 
 
@@ -77,12 +79,12 @@ const Login = () => {
                         }
                         <input onChange={(e)=>setPassword(e.target.value )} className='border mt-5 p-2 w-full rounded-md ' type="password" placeholder='Password' />
                         {errorMessage2 && 
-                            <p className=' bg-biguni py-1 pl-2 rounded-md text-white mt-1'>{errorMessage2} </p>
+                            <p className=' bg-biguni py-1 pl-2 rounded-md text-white mt-1'> {errorMessage2} </p>
                         }
                     </div>
                     <p className='mt-4 text-[#4d4d5d]'>Forgot Your Password?</p>
                     <button onClick={() => handleSubmit()} className='border py-2 text-center bg-biguni mt-8 text-white w-full rounded-md font-bold font-josefin'>Sign in</button>
-                    <p className='text-center mt-5 text-[#4d4d5d]'>Don’t have an Account?Create account</p>
+                    <p className='text-center mt-5 text-[#4d4d5d]'><Link to='/demo' >Don’t have an Account?Create account</Link> </p>
                 </div>
             </div>
         </>

@@ -29,7 +29,7 @@ const Products = () => {
             <h2 className='text-3xl font-josefin text-[#151875]'>Leatest Products</h2>
             <div className=" flex justify-center md:gap-5 gap-2 mt-2 text-[12px] md:text-[15px]  ">
                 <p className='hover:text-primary hover:underline'>New Arrival</p>
-                <p className='hover:text-primary hover:underline'>Best Seller</p>
+                <p className='hover:text-primary hover:underline'><Link to='/demo' >Best Seller</Link> </p>
                 <p className='hover:text-primary hover:underline'>Featured</p>
                 <p className='hover:text-primary hover:underline'>Special Offer</p>
             </div>
