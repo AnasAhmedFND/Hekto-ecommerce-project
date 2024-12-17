@@ -6,8 +6,7 @@ export const cartSlice = createSlice({
     cartItems: localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : []
   },
   reducers: {
-    addToCart: (state, action) => {
-            
+    addToCart: (state, action) => {            
       let findProducts = state.cartItems.findIndex((item)=>item.id == action.payload.id)
 
      if(findProducts === -1){
@@ -26,12 +25,10 @@ export const cartSlice = createSlice({
     dicrement: (state, action) => {       
        if(state.cartItems[action.payload].qty !== 1)
        {
-        state.cartItems[action.payload].qty -= 1;
+        state.cartItems[action.payload].qty -= 1; 
       }
         
-        localStorage.setItem("cart", JSON.stringify(state.cartItems))
-      
-     
+      localStorage.setItem("cart", JSON.stringify(state.cartItems))           
             
     },
     deleteProduct: (state, action) => {
@@ -42,9 +39,7 @@ export const cartSlice = createSlice({
     clearCart: (state, action) => {
       state.cartItems = []
       localStorage.setItem("cart", JSON.stringify(state.cartItems))
-    }
-  
-    
+    }   
    
 
   }

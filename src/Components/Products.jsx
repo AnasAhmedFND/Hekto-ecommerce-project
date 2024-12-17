@@ -55,7 +55,7 @@ const Products = () => {
                 
                 <p className='text-blue-500'><FaRegHeart /></p>
                 <p  className='text-blue-500 '> <FaSearchPlus /></p>
-                <p onClick={() => hendelAddToCart() } className='text-blue-500 cursor-pointer'><LuShoppingCart /></p>
+                <p onClick={() => hendelAddToCart(item) } className='text-blue-500 cursor-pointer'><LuShoppingCart /></p>
                 <ToastContainer
                       position="top-center"
                       autoClose={1000}

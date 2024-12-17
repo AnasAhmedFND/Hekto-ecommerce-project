@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 const Shopcart = () => {
 
     let cartData = useSelector((state) => state.cartItmeSlice.cartItems)
-   console.log(cartData);
+   
    
     // increment plus..................................
     let dispatch = useDispatch()
@@ -43,7 +43,7 @@ const Shopcart = () => {
     
     let {totalPrice, totalQuantity} = cartData.reduce((acc, current) => {
         acc.totalPrice += (current.price * current.qty);
-        acc.totalQuantity += current.qty
+        acc.totalQuantity += current.qty;
         return acc
     }, {totalPrice: 0, totalQuantity: 0})
     

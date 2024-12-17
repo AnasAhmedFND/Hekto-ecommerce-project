@@ -1,5 +1,6 @@
 import React from 'react'
 import Cont from '../img/contact_ph.png'
+import { Link } from 'react-router-dom'
 
 
 const Contact = () => {
@@ -55,7 +56,7 @@ const Contact = () => {
                             </div>
                             <input className='border-2 w-full py-2 pl-2 mt-8 outline-none rounded-md  ' type="text" placeholder='Subject*' />
                             <textarea className='border-2 mt-8 w-full pl-2 outline-none rounded-md' name="text" id="#" placeholder='Text Your Massege*' ></textarea>
-                            <button className='borded bg-biguni py-2 px-5 text-white rounded-md mt-5'>Send Mail</button>
+                            <button className='borded bg-biguni py-2 px-5 text-white rounded-md mt-5'><Link to='/found' >Send Mail</Link> </button>
                         </div>
                     </div>
                     <div className=" md:w-1/2 px-2 md:px-0 md:mr-0 mr-1 ">

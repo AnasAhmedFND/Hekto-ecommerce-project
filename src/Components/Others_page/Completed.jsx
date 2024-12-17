@@ -2,6 +2,7 @@ import React from 'react'
 import { GiCheckMark } from "react-icons/gi";
 import Clock from '../img/clock1.png'
 import Node from '../img/node.png'
+import { Link } from 'react-router-dom';
 
 const Completed = () => {
     return (
@@ -13,7 +14,7 @@ const Completed = () => {
                     <p className='text-center w-[70%] mx-auto mt-5'>Thank you for your order! Your order is being processed and will be completed within 3-6
                         hours. You will receive an email confirmation when your order is completed.
                     </p>
-                    <button className='py-2 px-5 text-white bg-biguni rounded-sm ml-[41%] mt-10 '>Continue Shopping</button>
+                    <button className='py-2 px-5 text-white bg-biguni rounded-sm ml-[41%] mt-10 '><Link to="/shop" > Continue Shopping</Link></button>
 
                 </div>
                 
