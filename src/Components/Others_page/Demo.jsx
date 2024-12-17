@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { IoIosCheckmark } from "react-icons/io";
 import { apiData } from '../ContextApi';
+import { Link } from 'react-router-dom';
 
 
 const Demo = () => {
@@ -37,7 +38,7 @@ const Demo = () => {
                     <input className='w-full md:w-[48%] border-b-2 pb-2 bg-[#F8F8FD] px-2 md:mt-0 mt-5 ' type="text" placeholder='postal Code' />
                 </div>
 
-                <button className='py-2 px-5 bg-biguni font-josefin text-white mt-16 rounded-sm'>Continue Shipping</button>
+                <button className='py-2 px-5 bg-biguni font-josefin text-white mt-16 rounded-sm'><Link to='/faq' > Continue Shipping</Link></button>
             </div>
         </div>
 

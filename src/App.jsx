@@ -19,6 +19,7 @@ import Blog_page from './pages/Blog_page'
 import Demo_page from './pages/Demo_page'
 import Complet_page from './pages/Complet_page'
 import Found_page from './pages/Found_page'
+import Faq_page from './pages/Faq_page'
 
 
 
@@ -39,6 +40,7 @@ function App() {
       <Route path='/demo' element={<Demo_page/>} />
       <Route path='/complete' element={<Complet_page/>} />
       <Route path='/found' element={<Found_page/>} />
+      <Route path='/faq' element={<Faq_page/>} />
       
 
     </Route>
