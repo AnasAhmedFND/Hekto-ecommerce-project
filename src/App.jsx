@@ -39,7 +39,7 @@ function App() {
       <Route path='/about' element={<About_page/>} />
       <Route path='/demo' element={<Demo_page/>} />
       <Route path='/complete' element={<Complet_page/>} />
-      <Route path='/found' element={<Found_page/>} />
+      <Route path='/*' element={<Found_page/>} />
       <Route path='/faq' element={<Faq_page/>} />
       
 
