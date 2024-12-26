@@ -1,13 +1,17 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { MdOutlineStar } from "react-icons/md";
 import { LuShoppingCart } from "react-icons/lu";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { FaSearchPlus } from "react-icons/fa";
+
+
 import { apiData } from '../ContextApi';
 
 const Shoplist = () => {
  
     let shopListApi = useContext(apiData);
+
+    // let wishData = useSelector((state) => state.WishItmeSlice.wishItems)
 
    let ListPageFilter = shopListApi.filter((item) => item.id >= 9 && item.id <= 15)
 
@@ -15,9 +19,11 @@ const Shoplist = () => {
     <>
     <div className="container mx-auto pt-10 pb-20">
 
-    {ListPageFilter.map((item) => (
+    *
+    
+    {ListPageFilter.map((item, index) => (
 
-      <div className=" md:flex  gap-10 items-center mb-5  shadow-lg p-2">
+      <div key={index} className=" md:flex  gap-10 items-center mb-5  shadow-lg p-2">
         <img className=' ' src={item.thumbnail} alt="" />
         <div className="">
             <h3 className='font-bold text-xl font-josefin'>{item.title} <span className='text-6xl font-bold text-[#e12ec6] '>.</span> <span className='text-6xl font-bold text-red-800'>.</span> <span className='text-6xl font-bold text-[#2b2bf7] '>.</span> </h3>
@@ -42,6 +48,7 @@ const Shoplist = () => {
         </div>
       </div>
     )) }
+
     </div>
     </>
   )
