@@ -18,9 +18,13 @@ export const wishSlice = createSlice({
         state.wishItem[findProducts].qty +=1;
         localStorage.setItem('wish', JSON.stringify(state.wishItem))
       }
+    },
+    deleteWishItem:(state, action) => {
+      state.wishItem.splice(action.payload, 1);
+      localStorage.setItem('wish', JSON.stringify(state.wishItem))
     }
   }
 })
   
-export const {addToWish} = wishSlice.actions
+export const {addToWish, deleteWishItem} = wishSlice.actions
 export default wishSlice.reducer
