@@ -102,7 +102,7 @@ const Shopcart = () => {
                         <button className='py-2 px-3 text-white font-josefin rounded-sm bg-biguni'>Update Curt</button>
 
                         {cartData.length > 0 &&
-                        <button onClick={hendleClearCart} className='py-2 px-3 text-white font-josefin rounded-sm bg-biguni'>Cleat Curt</button>
+                        <button onClick={hendleClearCart} className='py-2 px-3 text-white font-josefin rounded-sm bg-biguni'>Clear Curt</button>
                          }
                     </div>
                 </div>
