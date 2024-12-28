@@ -47,7 +47,6 @@ const Shopcart = () => {
         return acc
     }, {totalPrice: 0, totalQuantity: 0})
     
-    
 
 
     return (

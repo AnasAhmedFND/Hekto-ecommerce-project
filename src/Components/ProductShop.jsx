@@ -8,6 +8,8 @@ import {useDispatch} from 'react-redux'
 import { addToCart } from './slice/cartSlice';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { addToWish } from './slice/wishSlice';
+
 
 
 
@@ -85,8 +87,10 @@ const ProductShop = () => {
  }
 
 //  Add To wish items starte............................
-
-
+let hendelAddToWish = (item) => {
+  dispatch(addToWish({...item, qty: 1}))
+  toast.success('Added to wish')
+}
 
   return (
     <>
@@ -165,6 +169,19 @@ const ProductShop = () => {
                     
                      />
                   <p onClick={() =>hendelAddToWish(item)} className='mt-3 cursor-pointer '><FiHeart /></p>
+                  <ToastContainer
+                    position="top-center"
+                    autoClose={1000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="light"
+                    
+                     />
                   <p className='mt-3'><FaSearchPlus /></p>
                 </div>
 
@@ -198,6 +215,19 @@ const ProductShop = () => {
                     
                      />
                   <p onClick={() =>hendelAddToWish(item)} className='mt-3 cursor-pointer'><FiHeart /></p>
+                  <ToastContainer
+                    position="top-center"
+                    autoClose={1000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="light"
+                    
+                     />
                   <p className='mt-3'><FaSearchPlus /></p>
                 </div>
 
@@ -231,6 +261,19 @@ const ProductShop = () => {
                     
                      />
                     <p onClick={() =>hendelAddToWish(item)} className='mt-3 cursor-pointer'><FiHeart /></p>
+                    <ToastContainer
+                    position="top-center"
+                    autoClose={1000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="light"
+                    
+                     />
                     <p className='mt-3'><FaSearchPlus /></p>
                   </div>
 
@@ -263,7 +306,20 @@ const ProductShop = () => {
                     theme="light"
                     
                      />
-                    <p onClick={() =>hendelAddToWish(item)} className='mt-3 cursor-pointer'><FiHeart /></p>              
+                    <p onClick={() =>hendelAddToWish(item)} className='mt-3 cursor-pointer'><FiHeart /></p> 
+                    <ToastContainer
+                    position="top-center"
+                    autoClose={1000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="light"
+                    
+                     />             
                     <p className='mt-3'><FaSearchPlus /></p>
                   </div>
 

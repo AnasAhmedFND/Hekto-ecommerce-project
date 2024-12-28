@@ -4,24 +4,22 @@ import { LuShoppingCart } from "react-icons/lu";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { FaSearchPlus } from "react-icons/fa";
 
-
 import { apiData } from '../ContextApi';
+import { useSelector } from 'react-redux';
 
-const Shoplist = () => {
- 
-    let shopListApi = useContext(apiData);
 
-    // let wishData = useSelector((state) => state.WishItmeSlice.wishItems)
+const Shoplist = () => {    
 
-   let ListPageFilter = shopListApi.filter((item) => item.id >= 9 && item.id <= 15)
+    let wishData = useSelector((state) => state.wishItemSlice.wishItem) 
+
 
   return (
     <>
     <div className="container mx-auto pt-10 pb-20">
 
-    *
     
-    {ListPageFilter.map((item, index) => (
+    
+    {wishData.map((item, index) => (
 
       <div key={index} className=" md:flex  gap-10 items-center mb-5  shadow-lg p-2">
         <img className=' ' src={item.thumbnail} alt="" />
