@@ -12,7 +12,7 @@ const Header = () => {
 
   
  let cartItemsNumber = useSelector((state) => state.cartItmeSlice.cartItems)
-
+ let wishItemsNumber = useSelector((state) => state.wishItemSlice.wishItem)
  
  
 
@@ -36,7 +36,12 @@ const Header = () => {
               <option value="#">BDT</option>
             </select>
             <p className='flex items-center'><Link to='/login' className='flex items-center' >  Login <RxPerson /> </Link></p>
-            <p className='flex items-center'><Link to='/shoplist' className='flex items-center'> Wishlist  <FaRegHeart className=' pt-1 pl-1 ' /> </Link> </p>
+
+            <div className="relative">
+            <p className='flex items-center'><Link to='/shoplist' className='flex items-center'> Wishlist  <FaRegHeart className=' pl-1 text-xl ' /> </Link> </p>
+            <h6 className='absolute w-4 h-4 -top-1 -right-2 bg-biguni rounded-full flex justify-center text-[12px] items-center '>{wishItemsNumber.length} </h6>
+            </div>
+
             <div className="relative ">
             <p><Link to='/cart' >  <FiShoppingCart className='w-[20px]  ' /> </Link> </p>
             <h6 className='absolute -top-2 -right-2 bg-biguni rounded-full h-4 w-4 flex justify-center text-[12px] items-center '><Link to='/cart' >{cartItemsNumber.length}</Link>  </h6>

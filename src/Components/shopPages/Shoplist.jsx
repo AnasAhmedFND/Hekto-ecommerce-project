@@ -61,7 +61,7 @@ const Shoplist = () => {
           </div>
         ))
         :
-        <button className='bg-biguni py-2 px-3 text-white rounded-sm relative  top-[60px] w-[20%] ml-[42%] '><Link to='/shop' > Go to shop</Link></button>
+        <button className='bg-biguni py-2 px-3 text-white rounded-sm relative  top-[60px] md:w-[20%] ml-[40%] '><Link to='/shop' > Go to shop</Link></button>
 
       }
 
@@ -69,7 +69,7 @@ const Shoplist = () => {
 
           {wishData.length > 0 &&
           
-          <button onClick={hendleClearWish} className='bg-biguni py-2 px-3 text-white rounded-sm relative  top-[60px] w-[20%] '>Clear All Item</button>
+          <button onClick={hendleClearWish} className=' bg-biguni py-2 px-3 text-white rounded-sm relative  top-[60px] md:w-[20%] '>Clear All Item</button>
           }
 
          
