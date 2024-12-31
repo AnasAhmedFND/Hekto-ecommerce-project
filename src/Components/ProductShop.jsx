@@ -106,7 +106,21 @@ let hendelAddToWish = (item) => {
               <ul className='overflow-y-scroll h-36'>
                 {category.map((item) => (
                   <li className='cursor-pointer md:bg-white bg-[#30e0dd] border mb-2 pl-2 py-1 shadow-md ' onClick={() => hendleCategory(item)}>{item}</li>
+                  
                 ))}
+                 <ToastContainer
+                    position="top-center"
+                    autoClose={1000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="light"
+                    
+                     />
               </ul>
             }
           </div>
@@ -121,7 +135,21 @@ let hendelAddToWish = (item) => {
                 {brand.map((item) => (
                   <li className='cursor-pointer md:bg-white bg-[#30e0dd] border mb-2 pl-2 py-1 shadow-md ' onClick={() => hendelBrand(item)}>{item}</li>
                 ))}
+                 <ToastContainer
+                    position="top-center"
+                    autoClose={1000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="light"
+                    
+                     />
               </ul>
+              
             }
           </div>
 
@@ -137,6 +165,20 @@ let hendelAddToWish = (item) => {
                 <li className='border py-1  shadow-md px-1 cursor-pointer' onClick={() => hendlePrice({ low: 20.01, high: 100.00 })}>$20.01 - $100.00</li>
                 <li className='border py-1  shadow-md px-1 cursor-pointer' onClick={() => hendlePrice({ low: 100.01, high: 1000.00 })}>$100.01 - $1000.00</li>
                 <li className='border py-1  shadow-md px-1 cursor-pointer' onClick={() => hendlePrice({ low: 1000.01, high: 10000.00 })}>$1000.01 - $10000.00</li>
+
+                <ToastContainer
+                    position="top-center"
+                    autoClose={1000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="light"
+                    
+                     />
 
               </ul>
             }

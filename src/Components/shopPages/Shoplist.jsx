@@ -8,6 +8,10 @@ import { GiCrossedSabres } from "react-icons/gi";
 import { useDispatch, useSelector } from 'react-redux';
 import { clearWishAll, deleteWishItem } from '../slice/wishSlice';
 import { Link } from 'react-router-dom';
+import { use } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { addToCart } from '../slice/cartSlice';
 
 
 const Shoplist = () => {
@@ -24,6 +28,12 @@ const Shoplist = () => {
   let hendleClearWish = () => {
     dispatch(clearWishAll())
   }
+
+  // wish item cart added................
+  let hendelAddToCart = (product) => {
+   dispatch(addToCart({...product, qty: 1}))
+   toast.success('Added to cart')
+  } 
 
   return (
     <>
@@ -52,9 +62,21 @@ const Shoplist = () => {
               </div>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est <br /> adipiscing in phasellus non in justo.</p>
               <div className="flex mt-4 gap-10">
-                <p><LuShoppingCart /></p>
                 <p><IoMdHeartEmpty /></p>
                 <p><FaSearchPlus /></p>
+                <p onClick={() => hendelAddToCart(item)} className='cursor-pointer'><LuShoppingCart /></p>
+                <ToastContainer
+                    position="top-center"
+                    autoClose={1000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="light"                    
+                     />
               </div>
               <p onClick={() => hendleWishItem(index)} className='absolute top-5 right-5 w-10 h-10 font-bold bg-[#f5f5f9] text-2xl flex justify-center p-2 rounded-full hover:bg-biguni hover:text-white duration-500 '><GiCrossedSabres /></p>
             </div>

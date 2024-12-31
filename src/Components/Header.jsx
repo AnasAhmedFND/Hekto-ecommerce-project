@@ -39,7 +39,7 @@ const Header = () => {
 
             <div className="relative">
             <p className='flex items-center'><Link to='/shoplist' className='flex items-center'> Wishlist  <FaRegHeart className=' pl-1 text-xl ' /> </Link> </p>
-            <h6 className='absolute w-4 h-4 -top-1 -right-2 bg-biguni rounded-full flex justify-center text-[12px] items-center '>{wishItemsNumber.length} </h6>
+            <h6 className='absolute w-4 h-4 -top-1 -right-2 bg-biguni rounded-full flex justify-center text-[12px] items-center '><Link to='/shoplist' >{wishItemsNumber.length}</Link>   </h6>
             </div>
 
             <div className="relative ">
