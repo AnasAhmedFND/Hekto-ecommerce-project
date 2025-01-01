@@ -10,6 +10,7 @@ import { useDispatch } from 'react-redux';
 import { addToCart } from './slice/cartSlice';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { addToWish } from './slice/wishSlice';
 
 const Featured = () => {
 
@@ -57,6 +58,12 @@ const Featured = () => {
     toast.success('Added to cart')
   }
 
+  // wish item hendele ..........................
+  let hendelAddToWish = (item) => {
+    dispatch(addToWish({...item, qty: 1}))
+    toast.success('Added to wish')
+  }
+
   return (
     <>
       <div className="container mx-auto mt-10 ">
@@ -74,7 +81,19 @@ const Featured = () => {
                   <p className='absolute -bottom-16  left-1/2 -translate-x-1/2  duration-700 ease-in-out group-hover:bottom-4 text-center '>  <Link to={`/shop/${item.id}`}> <Viewdetails /> </Link> </p>
 
                   <div className="flex gap-5 absolute top-2 -left-40  duration-700 group-hover:left-2 ">
-                    <p className='border p-2 rounded-full bg-[#e1e1eb] text-blue-400'> <FaRegHeart /></p>
+                    <p onClick={() => hendelAddToWish(item)} className='border p-2 rounded-full bg-[#e1e1eb] text-blue-400'> <FaRegHeart className='cursor-pointer' /></p>
+                    <ToastContainer
+                      position="top-center"
+                      autoClose={1000}
+                      hideProgressBar={false}
+                      newestOnTop={false}
+                      closeOnClick
+                      rtl={false}
+                      pauseOnFocusLoss
+                      draggable
+                      pauseOnHover
+                      theme="light"                     
+                    />
                     <p className='border p-2 rounded-full bg-[#e1e1eb] text-blue-400 '> <FaSearchPlus /></p>
                     
                     <p onClick={() => hendelAddToCart(item)} className='border p-2 rounded-full bg-[#e1e1eb] text-blue-400 cursor-pointer'><RiShoppingCartLine />  </p>

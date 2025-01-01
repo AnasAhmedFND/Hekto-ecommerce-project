@@ -10,17 +10,23 @@ import { useDispatch } from 'react-redux';
 import { addToCart } from './slice/cartSlice';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { addToWish } from './slice/wishSlice';
 
 const Products = () => {
     let produc = useContext(apiData)
 
-  
-
+  // added to cart this product....................
     const dispatch = useDispatch()
     const hendelAddToCart = (product) => {
       dispatch(addToCart({...product, qty: 1}))
       toast.success('Added to cart')
     } 
+
+    // added to wish item this product..............
+    let hendelAddToWish = (item) => {
+      dispatch(addToWish({...item, qty: 1}))
+      toast.success('Added to wish')
+    }
 
    
 
@@ -62,7 +68,19 @@ const Products = () => {
 
          <div className="absolute top-20 md:top-28 -left-5 group-hover:left-2 duration-700 flex flex-col gap-2 md:gap-5    ">
                 
-                <p className='text-blue-500'><FaRegHeart /></p>
+                <p onClick={() => hendelAddToWish(item)} className='text-blue-500'><FaRegHeart className='cursor-pointer' /></p>
+                <ToastContainer
+                      position="top-center"
+                      autoClose={1000}
+                      hideProgressBar={false}
+                      newestOnTop={false}
+                      closeOnClick
+                      rtl={false}
+                      pauseOnFocusLoss
+                      draggable
+                      pauseOnHover
+                      theme="light"                     
+                    />
                 <p  className='text-blue-500 '> <FaSearchPlus /></p>
                 <p onClick={() => hendelAddToCart(item) } className='text-blue-500 cursor-pointer'><LuShoppingCart /></p>
                 <ToastContainer
