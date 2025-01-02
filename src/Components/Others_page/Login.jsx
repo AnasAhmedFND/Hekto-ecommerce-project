@@ -44,8 +44,7 @@ const Login = () => {
             setErrorMessage2('password in eight characters.')
          }else if(/(?=.{8,})/.test(password)){
             setErrorMessage2(' ')
-         }
-         
+         }        
             
             createUserWithEmailAndPassword(auth, email, password)
             .then(() => {
@@ -69,7 +68,7 @@ const Login = () => {
             <div className="container mx-auto md:py-20 py-10 ">
                 <div className="border md:w-1/2 w-[90%] items-center px-10 py-10 mx-auto shadow-xl rounded-lg">
 
-                    <h2 className='md:text-4xl text-2xl font-bold font-josefin text-center  '>Login</h2>
+                    <h2 className='md:text-4xl text-2xl font-bold font-josefin text-center  '>Register</h2>
                     <p className='text-center text-[#4d4d5d] '>Please login using account detail bellow. <br /> </p>
                     <div className="">
                         <input onChange={(e)=>setEmail(e.target.value )} className='border mt-8 p-2 w-full rounded-md ' type="text" placeholder='Email Address' />
