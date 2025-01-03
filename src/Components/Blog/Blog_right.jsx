@@ -13,6 +13,7 @@ import { useDispatch } from 'react-redux';
 import { addToCart } from '../slice/cartSlice';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { addToWish } from '../slice/wishSlice';
 
 const Blog_right = () => {
   const blogData = useContext(apiData)
@@ -28,7 +29,11 @@ const Blog_right = () => {
     dispatch(addToCart({ ...product, qty: 1 }))
     toast.success('Added to cart')
   }
-
+  // add to wish itme....................................................................
+  let hendelAddToWish =(item) => {
+    dispatch(addToWish({...item, qty: 1}))
+    toast.success('Added to wish')
+  }
   return (
     <>
       <section className="container mx-auto md:py-20 py-10  md:flex md:justify-between">
@@ -82,7 +87,19 @@ const Blog_right = () => {
                 <h5>It is a long established fact</h5>
                 <p>Dec 15 2024</p>
                 <div className="flex gap-5 pt-2 ">
-                  <p className='text-[#35c0ea] '><FaHeartPulse /></p>
+                  <p onClick={() => hendelAddToWish(item)} className='text-[#35c0ea] '><FaHeartPulse className='cursor-pointer' /></p>
+                  <ToastContainer
+                    position="top-center"
+                    autoClose={1000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="light"
+                  />
                   <p><FaSearchPlus /></p>
                   <p onClick={() => hendelAddToCart(item)} className='text-primary cursor-pointer'><TiShoppingCart /></p>
                   <ToastContainer
