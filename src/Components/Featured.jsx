@@ -81,7 +81,7 @@ const Featured = () => {
                   <p className='absolute -bottom-16  left-1/2 -translate-x-1/2  duration-700 ease-in-out group-hover:bottom-4 text-center '>  <Link to={`/shop/${item.id}`}> <Viewdetails /> </Link> </p>
 
                   <div className="flex gap-5 absolute top-2 -left-40  duration-700 group-hover:left-2 ">
-                    <p onClick={() => hendelAddToWish(item)} className='border p-2 rounded-full bg-[#e1e1eb] text-blue-400'> <FaRegHeart className='cursor-pointer' /></p>
+                    <p onClick={() => hendelAddToWish(item)} className='border p-2 rounded-full bg-[#e1e1eb] text-blue-400 hover:bg-biguni hover:text-white'> <FaRegHeart className='cursor-pointer' /></p>
                     <ToastContainer
                       position="top-center"
                       autoClose={1000}
@@ -94,9 +94,9 @@ const Featured = () => {
                       pauseOnHover
                       theme="light"                     
                     />
-                    <p className='border p-2 rounded-full bg-[#e1e1eb] text-blue-400 '> <FaSearchPlus /></p>
+                    <p className='border p-2 rounded-full bg-[#e1e1eb] text-blue-400 relative right-5 hover:bg-biguni hover:text-white cursor-pointer'> <FaSearchPlus /></p>
                     
-                    <p onClick={() => hendelAddToCart(item)} className='border p-2 rounded-full bg-[#e1e1eb] text-blue-400 cursor-pointer'><RiShoppingCartLine />  </p>
+                    <p onClick={() => hendelAddToCart(item)} className='border p-2 rounded-full bg-[#e1e1eb] text-blue-400 cursor-pointer relative right-5 hover:bg-biguni hover:text-white'><RiShoppingCartLine />  </p>
                     <ToastContainer
                       position="top-center"
                       autoClose={1000}
