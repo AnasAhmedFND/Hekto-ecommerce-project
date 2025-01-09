@@ -4,6 +4,7 @@ import Product1 from '../assets/shopex/trending1.png'
 import Cher from '../assets/product1.png'
 
 import { apiData } from './ContextApi'
+import { Link } from 'react-router-dom'
 const TwoTrending = () => {
 
   let product = useContext(apiData);
@@ -30,13 +31,13 @@ const TwoTrending = () => {
 
           <div className=" w-[350px] bg-[#FFF6FB] p-5 h-[210px]        ">
             <h2 className='text-xl font-bold font-josefin '>23% off in all products</h2>
-            <p className='text-primary'>Shop Now</p>
+            <p className='text-primary cursor-pointer'><Link to='/shop'>Shop Now</Link> </p>
             <img className='relative left-36 bottom-10 w-[180px] ' src={Product} alt="" />
           </div>
 
           <div className=" w-[350px] bg-[#ececf2] p-5 h-[210px]  items-end      ">
             <h2 className='text-xl font-bold font-josefin '>23% off in all products</h2>
-            <p className='text-primary'>Shop Now</p>
+            <p className='text-primary cursor-pointer'><Link to='/shop'>Shop Now</Link></p>
             <img className=' w-[260px] ml-10 relative bottom-5' src={Product1} alt="" />
           </div>
 
