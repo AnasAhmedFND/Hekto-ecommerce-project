@@ -56,7 +56,7 @@ const Categories = () => {
 
             <div className="   relative overflow-hidden text-center ">
             <img className='border w-40 h-40 rounded-full  bg-[#f5f5f8] bottom-[3px] p-5 mx-auto' src={item.thumbnail} alt="" />
-            <button className='py-[2px] px-2 bg-green-400  text-[9px] items-center absolute top-[130px] -left-20  group-hover:left-[90px]  text-white duration-700'><Link to='/shop' >View Shop </Link> </button>
+            <button className='py-[2px] px-2 bg-green-400  text-[9px] items-center absolute top-[130px] -left-20  group-hover:left-[90px]  text-white duration-700 rounded-xl'><Link to='/shop' >View Shop </Link> </button>
 
            
             <h4 className='mt-2 '>{item.title} </h4>
